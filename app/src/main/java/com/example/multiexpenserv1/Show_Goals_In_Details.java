@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
 
 import java.util.Objects;
 

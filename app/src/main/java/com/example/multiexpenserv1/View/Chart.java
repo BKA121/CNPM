@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.lap_bieu_do;
+package com.example.multiexpenserv1.View;
 
 
 import android.os.Bundle;
@@ -8,9 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.Controller.ChartController;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.ql_expensive.expense;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
@@ -20,22 +19,18 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.components.Description;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 public class Chart extends AppCompatActivity {
 
     private LineChart lineChart;
-    // Lấy dữ liệu chi tiêu từ cơ sở dữ liệu
-    DataBaseHelper dbHelper;
-    List<expense> expenses;
     ArrayList<Entry> entries;
-    // Tạo LineDataSet
     LineDataSet lineDataSet;
+    private ChartController chartController;
 
     TextView minExpenseText;
     TextView maxExpenseText;
     TextView totalExpenseText;
+
     int minExpenseDay = -1, maxExpenseDay = -1; // Ngày ít và nhiều chi tiêu nhất
     float minExpense = Float.MAX_VALUE, maxExpense = Float.MIN_VALUE; // Giá trị chi tiêu ít và nhiều nhất
     float totalExpenses = 0; // Tổng chi tiêu trong tháng
@@ -46,28 +41,16 @@ public class Chart extends AppCompatActivity {
         setContentView(R.layout.activity_line_chart);
 
         lineChart= findViewById(R.id.lineChart);
-        dbHelper = new DataBaseHelper(Chart.this);
-        expenses = dbHelper.getAllExpenses();
         minExpenseText = findViewById(R.id.minExpenseText);
         maxExpenseText = findViewById(R.id.maxExpenseText);
         totalExpenseText = findViewById(R.id.totalExpenseText);
 
+        chartController = new ChartController(this);
+
         // Xác định số ngày trong tháng hiện tại
-        Calendar calendar = Calendar.getInstance();
-        int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-
+        int daysInMonth = chartController.getDaysInMonth();
         // Tạo một mảng để lưu tổng chi tiêu của mỗi ngày trong tháng
-        float[] dailyExpenses = new float[daysInMonth];
-        // Duyệt qua tất cả chi tiêu và tính tổng chi tiêu theo ngày
-        for (expense exp : expenses) {
-            int day = Integer.parseInt(exp.getDay());  // Lấy ngày từ dữ liệu chi tiêu
-            float amount = Float.parseFloat(exp.getAmount());  // Lấy số tiền chi tiêu
-
-            // Cộng dồn chi tiêu vào ngày tương ứng
-            if (day >= 1 && day <= daysInMonth) {
-                dailyExpenses[day - 1] += amount;  // day-1 vì mảng bắt đầu từ chỉ số 0
-            }
-        }
+        float[] dailyExpenses = chartController.calculateDailyExpenses();
 
         // Tạo dữ liệu cho biểu đồ đường
         entries = new ArrayList<>();
@@ -92,35 +75,10 @@ public class Chart extends AppCompatActivity {
 
         // Thiết lập màu sắc cho đường
         lineDataSet = new LineDataSet(entries, "Dữ liệu cho 30 ngày");
-        lineDataSet.setColor(ContextCompat.getColor(this, R.color.colorPrimary));
-        // Thiết lập màu sắc cho giá trị (chữ số trên biểu đồ)
-        lineDataSet.setValueTextColor(ContextCompat.getColor(this, R.color.colorAccent));
-        // Thiết lập kích thước chữ
-        lineDataSet.setValueTextSize(10f);
-        // Thiết lập độ dày của đường
-        lineDataSet.setLineWidth(2f);
-
-        lineChart.setHardwareAccelerationEnabled(true); // Bật tăng tốc phần cứng
-        lineChart.setLayerType(View.LAYER_TYPE_HARDWARE, null); // Tăng chất lượng vẽ
-
-        // Thêm các điểm tròn tại mỗi Entry
-        lineDataSet.setCircleRadius(4f); // Đường kính của điểm tròn
-        lineDataSet.setCircleColor(ContextCompat.getColor(this, R.color.colorPrimaryDark)); // Màu của điểm tròn
-
-        lineDataSet.setDrawCircles(true); // Hiển thị vòng tròn
-
-        // Sử dụng IValueFormatter để chỉ hiển thị giá trị khác 0
-        lineDataSet.setValueFormatter((value, entry, dataSetIndex, viewPortHandler) -> {
-            if (value == 0f) {
-                return ""; // Không hiển thị giá trị nếu là 0
-            }
-            return String.valueOf(value); // Hiển thị giá trị nếu khác 0
-        });
-
+        setLineChart();
         // Thêm hiệu ứng Gradient
         lineDataSet.setDrawFilled(true); // Hiển thị vùng được lấp đầy
         lineDataSet.setFillColor(ContextCompat.getColor(this, R.color.colorPrimary)); // Màu lấp đầy
-
 
         // Tạo LineData và gán cho LineChart
         LineData lineData = new LineData(lineDataSet);
@@ -140,20 +98,39 @@ public class Chart extends AppCompatActivity {
         YAxis yAxisRight = lineChart.getAxisRight();
         yAxisRight.setEnabled(false);
 
+        // Cấu hình hiệu ứng vẽ (animate) và vẽ lại
+        animateLineChart();
+    }
+    public void setLineChart(){
+        lineDataSet.setColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        lineDataSet.setValueTextColor(ContextCompat.getColor(this, R.color.colorAccent));
+        lineDataSet.setValueTextSize(10f);
+        lineDataSet.setLineWidth(2f);
+        lineChart.setHardwareAccelerationEnabled(true); // Bật tăng tốc phần cứng
+        lineChart.setLayerType(View.LAYER_TYPE_HARDWARE, null); // Tăng chất lượng vẽ
+        lineDataSet.setCircleRadius(4f); // Đường kính của điểm tròn
+        lineDataSet.setCircleColor(ContextCompat.getColor(this, R.color.colorPrimaryDark)); // Màu của điểm tròn
+        lineDataSet.setDrawCircles(true); // Hiển thị vòng tròn
+        // Sử dụng IValueFormatter để chỉ hiển thị giá trị khác 0
+        lineDataSet.setValueFormatter((value, entry, dataSetIndex, viewPortHandler) -> {
+            if (value == 0f) {
+                return ""; // Không hiển thị giá trị nếu là 0
+            }
+            return String.valueOf(value); // Hiển thị giá trị nếu khác 0
+        });
+    }
+    public void animateLineChart(){
         // Cấu hình hiệu ứng vẽ (animate)
         lineChart.animateX(1000); // animate theo trục X trong 1000ms
         lineChart.animateY(1000); // animate theo trục Y trong 1000ms
-
         // Cấu hình mô tả cho biểu đồ
         Description description = new Description();
         description.setText("");
         lineChart.setDescription(description);
-
         // Cấu hình nền và viền của biểu đồ
         lineChart.setDrawBorders(true); // Vẽ viền
         lineChart.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white)); // Nền trắng
         lineChart.setDrawGridBackground(false); // Tắt nền lưới
-
         // Vẽ lại biểu đồ
         lineChart.invalidate();
     }

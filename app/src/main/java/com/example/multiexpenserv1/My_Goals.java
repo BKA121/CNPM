@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
-import com.example.multiexpenserv1.muc_tieu.goal;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.goal;
 
 import java.util.List;
 

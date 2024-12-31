@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
-import com.example.multiexpenserv1.muc_tieu.goal;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.goal;
+import com.example.multiexpenserv1.View.Home;
 import com.google.android.material.snackbar.Snackbar;
 
 public class New_Goal extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class New_Goal extends AppCompatActivity {
 
         // On click listener for back button
         back.setOnClickListener(v -> {
-            startActivity(new Intent(New_Goal.this,Home.class));
+            startActivity(new Intent(New_Goal.this, Home.class));
             finish();
         });
 

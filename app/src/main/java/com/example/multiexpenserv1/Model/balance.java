@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.ql_balance;
+package com.example.multiexpenserv1.Model;
 
 public class balance {
     private String title,amount;

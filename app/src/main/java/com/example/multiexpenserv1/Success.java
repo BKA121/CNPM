@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import com.example.multiexpenserv1.View.Home;
+
 public class Success extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class Success extends AppCompatActivity {
                 new java. util. TimerTask() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Success.this,Home.class));
+                        startActivity(new Intent(Success.this, Home.class));
                         finish();
                     }
                 },

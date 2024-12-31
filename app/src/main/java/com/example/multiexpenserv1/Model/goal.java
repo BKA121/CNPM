@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.muc_tieu;
+package com.example.multiexpenserv1.Model;
 
 public class goal {
     private int ID;

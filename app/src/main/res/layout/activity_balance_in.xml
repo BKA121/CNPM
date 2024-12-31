@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8FBF9"
-    tools:context=".Balance_in">
+    tools:context=".View.Balance_in">
 
     <ImageView
         android:id="@+id/day_holder_balance"

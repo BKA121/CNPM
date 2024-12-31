@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.multiexpenserv1.View.Home;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(FirstTime.equals("Yes")) {
-            startActivity(new Intent(MainActivity.this,Home.class));
+            startActivity(new Intent(MainActivity.this, Home.class));
             finish();
         }
         else {

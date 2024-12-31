@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
-import com.example.multiexpenserv1.ql_expensive.expense;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.expense;
+import com.example.multiexpenserv1.View.Home;
 import com.google.android.material.snackbar.Snackbar;
 
 public class new_expense_in extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class new_expense_in extends AppCompatActivity {
 
         // Sự kiện khi nhấn nút quay lại
         back.setOnClickListener(v -> {
-            startActivity(new Intent(new_expense_in.this,Home.class));
+            startActivity(new Intent(new_expense_in.this, Home.class));
             finish();
         });
 
