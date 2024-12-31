@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.ql_balance.balance;
+
 import java.util.List;
 
 public class show_transactions extends AppCompatActivity {

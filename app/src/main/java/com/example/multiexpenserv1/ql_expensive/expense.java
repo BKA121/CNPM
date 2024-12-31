@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.ql_expensive;
 
 public class expense {
     private String Title,amount,description;

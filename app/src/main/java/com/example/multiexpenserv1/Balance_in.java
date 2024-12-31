@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.ql_balance.balance;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Balance_in extends AppCompatActivity {

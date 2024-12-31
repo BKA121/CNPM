@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
         Goals.setOnClickListener(v -> startActivity(new Intent(Home.this,New_Goal.class)));
 
         //Chart Activity
-        Chart.setOnClickListener(v -> startActivity(new Intent(Home.this,Chart.class)));
+        Chart.setOnClickListener(v -> startActivity(new Intent(Home.this, com.example.multiexpenserv1.lap_bieu_do.Chart.class)));
 
         //Information Activity
         information.setOnClickListener(v -> startActivity(new Intent(Home.this, Information.class)));

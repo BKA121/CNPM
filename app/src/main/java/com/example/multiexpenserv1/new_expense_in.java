@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.ql_expensive.expense;
 import com.google.android.material.snackbar.Snackbar;
 
 public class new_expense_in extends AppCompatActivity {

@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.multiexpenserv1.muc_tieu.goal;
+
 import java.util.List;
 
 public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHolder> {

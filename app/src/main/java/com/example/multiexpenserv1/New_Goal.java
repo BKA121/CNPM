@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.muc_tieu.goal;
 import com.google.android.material.snackbar.Snackbar;
 
 public class New_Goal extends AppCompatActivity {

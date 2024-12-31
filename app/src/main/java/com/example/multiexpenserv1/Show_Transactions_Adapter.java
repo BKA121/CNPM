@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.multiexpenserv1.ql_balance.balance;
+
 import java.util.List;
 
 public class Show_Transactions_Adapter extends RecyclerView.Adapter< Show_Transactions_Adapter.ViewHolder> {

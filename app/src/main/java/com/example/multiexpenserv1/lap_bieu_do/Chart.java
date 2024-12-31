@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.lap_bieu_do;
 
 
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.R;
+import com.example.multiexpenserv1.ql_expensive.expense;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;

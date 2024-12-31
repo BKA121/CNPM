@@ -25,7 +25,7 @@
             android:name=".NotificationSettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".Chart"
+            android:name=".lap_bieu_do.Chart"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -33,7 +33,7 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <receiver android:name=".NotificationReceiver" />
+        <receiver android:name=".nhac_nho.NotificationReceiver" />
 
         <activity android:name=".Congratulations" />
         <activity android:name=".Show_Goals_In_Details" />
