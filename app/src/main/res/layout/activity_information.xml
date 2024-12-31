@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="540dp"
+        android:layout_height="340dp"
+        android:layout_marginBottom="452dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/getting_started_2_background" />
+    <!-- Header -->
+
+    <!-- User Name -->
+
+    <!-- Current Balance -->
+
+    <!-- Notification Settings -->
+
+    <!-- Logout Button -->
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="275dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="36dp"
+        android:text="Thông Tin Người Dùng"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/imageView50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="260dp"
+        android:text="Họ Tên: "
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="23sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_user_name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_user_name_label" />
+
+    <TextView
+        android:id="@+id/tv_current_balance_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Số Dư Hiện Tại:"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_user_name_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_current_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@android:color/black"
+        android:textSize="23sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_current_balance_label"
+        app:layout_constraintEnd_toEndOf="@+id/tv_user_name"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toEndOf="@id/tv_current_balance_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_notifications_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Thiết lập Thông Báo"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_current_balance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_current_balance_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_balance_label" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:text="Đăng xuất"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_notifications_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notifications_label"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintEnd_toStartOf="@+id/logout"
+        app:srcCompat="@drawable/icon_logout" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_notifications_label"
+        app:layout_constraintEnd_toStartOf="@+id/tv_notifications_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_notification" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_current_balance_label"
+        app:layout_constraintEnd_toStartOf="@+id/tv_current_balance_label"
+        app:srcCompat="@drawable/icon_money" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="29dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user_name_label"
+        app:layout_constraintEnd_toStartOf="@+id/tv_user_name_label"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/infor_setting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
