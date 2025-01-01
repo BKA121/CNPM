@@ -80,12 +80,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         ContentValues cv=new ContentValues();
 
         // Putting content values with corresponding to the column names
-       cv.put(TITLE,obj.getTitle());
+        cv.put(TITLE,obj.getTitle());
         cv.put(AMOUNT,obj.getAmount());
         cv.put(DAY,obj.getDay());
         cv.put(MONTH,obj.getMonth());
         cv.put(YEAR,obj.getYear());
-       cv.put(STATUS,obj.getStatus());
+        cv.put(STATUS,obj.getStatus());
         //Inserting values into the table
         // Sử dụng try-with-resources cho SQLiteDatabase
         try (SQLiteDatabase db = this.getWritableDatabase()) {
@@ -197,7 +197,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 //            // loop through the cursor and create a new class objects. put them into the return list
                 do {
 //                taking data from columns
-
                     String Title=cursor.getString(0);
                     String Type=cursor.getString(1);
                     String Amount = cursor.getString(2);

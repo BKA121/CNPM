@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.multiexpenserv1.R;
+import com.example.multiexpenserv1.ShowExpensesAdapter;
 
 public class Show_Expenses_In_Details extends AppCompatActivity {
 
@@ -35,6 +38,5 @@ public class Show_Expenses_In_Details extends AppCompatActivity {
 
         //Setting on click listener for back
         back.setOnClickListener(v -> finish());
-
     }
 }

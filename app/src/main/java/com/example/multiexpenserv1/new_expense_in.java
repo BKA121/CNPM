@@ -91,12 +91,10 @@ public class new_expense_in extends AppCompatActivity {
                         db = new DataBaseHelper(new_expense_in.this);
                         isSaved = db.addExpenseToDB(obj); // Ghi dữ liệu vào database
                         db.close(); // Đóng kết nối cơ sở dữ liệu
-
                     } else {
                         Toast.makeText(new_expense_in.this, "Số dư không đủ!", Toast.LENGTH_LONG).show();
                         isBalanceConsistent = false;
                     }
-
                 } catch (NumberFormatException e) {
                     Snackbar.make(v, "Vui lòng nhập số tiền hợp lệ!", Snackbar.LENGTH_LONG).show();
                     return;

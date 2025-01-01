@@ -21,10 +21,10 @@ public class Show_Expenses extends AppCompatActivity {
         setContentView(R.layout.activity_show_expenses);
 
         recyclerView = findViewById(R.id.Show_Expenses_Recycler_View);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         List<expense> expenseList=db.getAllExpenses();
         ShowExpensesAdapter adapter=new ShowExpensesAdapter(expenseList,this);
         recyclerView.setAdapter(adapter);
-
     }
 }

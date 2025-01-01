@@ -19,11 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Checking for Onboard process
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         String FirstTime=sharedPreferences.getString("FirstTimeInstalled","");
-
-
 
         if(FirstTime.equals("Yes")) {
             startActivity(new Intent(MainActivity.this, Home.class));

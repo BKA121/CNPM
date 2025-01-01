@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.example.multiexpenserv1.View.Home;
 
@@ -16,14 +17,11 @@ public class Success extends AppCompatActivity {
         setContentView(R.layout.activity_success);
         MediaPlayer mediaPlayer=MediaPlayer.create(this,R.raw.success);
         mediaPlayer.start();
-        new java. util. Timer(). schedule(
-                new java. util. TimerTask() {
-                    @Override
-                    public void run() {
-                        startActivity(new Intent(Success.this, Home.class));
-                        finish();
-                    }
-                },
-                3000);
+
+        // Chuyển sang màn hình Home sau 3 giây
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(Success.this, Home.class));
+            finish();
+        }, 3000);
     }
 }

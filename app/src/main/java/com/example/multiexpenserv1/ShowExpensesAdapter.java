@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.multiexpenserv1.Model.expense;
+import com.example.multiexpenserv1.View.Show_Expenses_In_Details;
 
 import java.util.List;
 
@@ -57,7 +58,6 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
             Title=itemView.findViewById(R.id.Title_Show_Expenses);
             Amount=itemView.findViewById(R.id.Amount_Show_Expenses);
             Date=itemView.findViewById(R.id.Date_Show_Expenses);
-
         }
         @Override
         public void onClick(View v) {
@@ -68,21 +68,23 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
             expense e=expenseList.get(position);
 
             //Declaring intent
-            Intent intent=new Intent(context,Show_Expenses_In_Details.class);
+            Intent intent=new Intent(context, Show_Expenses_In_Details.class);
+
             //Initializing values from object
             String Title,Amount,Date,Description;
             Title=e.getTitle();
             Amount=e.getAmountWithRS();
             Date=e.getDate();
             Description=e.getDescription();
+
             //Putting extra values in to the intent
             intent.putExtra(ShowExpenseTitleKey,Title);
             intent.putExtra(ShowExpenseAmountKey,Amount);
             intent.putExtra(ShowExpenseDateKey,Date);
             intent.putExtra(ShowExpenseDescriptionKey,Description);
+
             //Starting activity
             context.startActivity(intent);
-
         }
     }
 }

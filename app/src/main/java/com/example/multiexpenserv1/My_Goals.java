@@ -19,8 +19,10 @@ public class My_Goals extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_goals);
+
         recyclerView = findViewById(R.id.My_Goals_Recycler_View);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         List<goal> goalsList=db.getAllGoals();
         MyGoals_Adapter adapter=new MyGoals_Adapter(goalsList,this);
         recyclerView.setAdapter(adapter);

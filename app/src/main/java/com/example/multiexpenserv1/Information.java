@@ -21,17 +21,17 @@ public class Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
-        currentBalance=findViewById(R.id.tv_current_balance);
-        fullname=findViewById(R.id.tv_user_name);
+        currentBalance = findViewById(R.id.tv_current_balance);
+        fullname = findViewById(R.id.tv_user_name);
         Notification_Settings=findViewById(R.id.tv_notifications_label);
 
         SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         Original_Balance = sharedPreferences.getString("Current_Balance", "");
         currentBalance.setText(Original_Balance + " VND");
 
-        fname=sharedPreferences.getString("First_Name","");
-        lname=sharedPreferences.getString("Last_Name","");
-        fullname.setText(fname +" "+ lname);
+        fname = sharedPreferences.getString("First_Name","");
+        lname = sharedPreferences.getString("Last_Name","");
+        fullname.setText(fname + " " + lname);
 
         //Information Activity
         Notification_Settings.setOnClickListener(v -> startActivity(new Intent(Information.this, NotificationSettingsActivity.class)));
