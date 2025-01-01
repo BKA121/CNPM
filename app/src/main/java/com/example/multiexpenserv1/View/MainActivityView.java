@@ -1,6 +1,5 @@
 package com.example.multiexpenserv1.View;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -9,10 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.multiexpenserv1.Controller.MainActivityController;
-import com.example.multiexpenserv1.GettingStarted_two;
-import com.example.multiexpenserv1.Model.Login;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.View.Home;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivityView extends AppCompatActivity {
@@ -24,35 +20,14 @@ public class MainActivityView extends AppCompatActivity {
     public EditText getFirstName() {
         return FirstName;
     }
-
-    public void setFirstName(EditText firstName) {
-        this.FirstName = firstName;
-    }
-
-    // Getter và Setter cho LastName
     public EditText getLastName() {
         return LastName;
     }
-
-    public void setLastName(EditText lastName) {
-        this.LastName = lastName;
-    }
-
-    // Getter và Setter cho Email
     public EditText getEmail() {
         return Email;
     }
-
-    public void setEmail(EditText email) {
-        this.Email = email;
-    }
-
     public ImageView getNextButton() {
         return nextButton;
-    }
-
-    public void setNextButton(ImageView nextButton) {
-        this.nextButton = nextButton;
     }
 
     @Override

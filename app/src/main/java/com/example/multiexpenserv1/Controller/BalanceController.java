@@ -12,6 +12,7 @@ import com.example.multiexpenserv1.Model.balance;
 import com.example.multiexpenserv1.View.Balance_in;
 import com.example.multiexpenserv1.View.Home;
 import com.example.multiexpenserv1.new_expense_in;
+import com.example.multiexpenserv1.show_transactions;
 
 public class BalanceController {
     private final Context context;
@@ -48,7 +49,7 @@ public class BalanceController {
         }
     }
     public void navigateToShowTransactions() {
-        Intent intent = new Intent(context, new_expense_in.class);
+        Intent intent = new Intent(context, show_transactions.class);
         context.startActivity(intent);
     }
     public void navigateToHome() {
