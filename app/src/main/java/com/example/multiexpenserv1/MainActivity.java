@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.multiexpenserv1.View.GettingStarted_two;
 import com.example.multiexpenserv1.View.Home;
 import com.google.android.material.snackbar.Snackbar;
 

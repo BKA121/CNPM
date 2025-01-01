@@ -25,14 +25,14 @@ public class Home extends AppCompatActivity {
         homeController = new HomeController(this);
 
         //Accessing the text view by id from backend
-        name=findViewById(R.id.Welcome);
-        balance=findViewById(R.id.Home_Balance);
-        share=findViewById(R.id.share);
-        newexpense=findViewById(R.id.newexpense_button);
-        Balance_in=findViewById(R.id.Balance_button);
-        Goals=findViewById(R.id.Goals_button);
-        information=findViewById(R.id.Information);
-        Chart=findViewById(R.id.Gifts_Button);
+        name = findViewById(R.id.Welcome);
+        balance = findViewById(R.id.Home_Balance);
+        share = findViewById(R.id.share);
+        newexpense = findViewById(R.id.newexpense_button);
+        Balance_in = findViewById(R.id.Balance_button);
+        Goals = findViewById(R.id.Goals_button);
+        information = findViewById(R.id.Information);
+        Chart = findViewById(R.id.Gifts_Button);
 
         // Lấy thông tin người dùng và hiển thị
         user = homeController.getUserData();
@@ -40,11 +40,6 @@ public class Home extends AppCompatActivity {
         balance.setText("RS " + user.getCurrentBalance());
 
         // Xử lý sự kiện nhấn nút
-        share.setOnClickListener(v -> homeController.shareApp());
-        newexpense.setOnClickListener(v -> homeController.navigateToNewExpense());
-        Balance_in.setOnClickListener(v -> homeController.navigateToBalance());
-        Goals.setOnClickListener(v -> homeController.navigateToGoals());
-        Chart.setOnClickListener(v -> homeController.navigateToChart());
-        information.setOnClickListener(v -> homeController.navigateToInformation());
+        homeController.handleButtonClicks(share, newexpense, Balance_in, Goals, Chart, information);
     }
 }

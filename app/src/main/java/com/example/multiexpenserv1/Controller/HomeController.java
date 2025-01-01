@@ -3,6 +3,7 @@ package com.example.multiexpenserv1.Controller;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.widget.ImageView;
 
 import com.example.multiexpenserv1.View.Balance_in;
 import com.example.multiexpenserv1.Information;
@@ -22,6 +23,18 @@ public class HomeController {
         String firstName = sharedPreferences.getString("First_Name", "");
         String currentBalance = sharedPreferences.getString("Current_Balance", "");
         return new User(firstName, currentBalance);
+    }
+
+    // Xử lý sự kiện nhấn nút
+    public void handleButtonClicks(ImageView share, ImageView newexpense, ImageView Balance_in,
+                                   ImageView Goals, ImageView Chart, ImageView information) {
+        // Gắn sự kiện vào các nút
+        share.setOnClickListener(v -> shareApp());
+        newexpense.setOnClickListener(v -> navigateToNewExpense());
+        Balance_in.setOnClickListener(v -> navigateToBalance());
+        Goals.setOnClickListener(v -> navigateToGoals());
+        Chart.setOnClickListener(v -> navigateToChart());
+        information.setOnClickListener(v -> navigateToInformation());
     }
 
     public void navigateToNewExpense() {

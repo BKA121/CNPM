@@ -46,7 +46,7 @@
         <activity android:name=".Success" />
         <activity android:name=".new_expense_in" />
         <activity
-            android:name=".GettingStarted_two"
+            android:name=".View.GettingStarted_two"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".View.Home"

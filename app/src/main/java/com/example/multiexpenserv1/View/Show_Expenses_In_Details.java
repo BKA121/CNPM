@@ -17,18 +17,18 @@ public class Show_Expenses_In_Details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_expenses_in_details);
         //Getting Data from the intent
-        Intent intent=getIntent();
-        String Title=intent.getStringExtra(ShowExpensesAdapter.ShowExpenseTitleKey);
-        String Amount=intent.getStringExtra(ShowExpensesAdapter.ShowExpenseAmountKey);
-        String Date=intent.getStringExtra(ShowExpensesAdapter.ShowExpenseDateKey);
-        String Description=intent.getStringExtra(ShowExpensesAdapter.ShowExpenseDescriptionKey);
+        Intent intent = getIntent();
+        String Title = intent.getStringExtra(ShowExpensesAdapter.ShowExpenseTitleKey);
+        String Amount = intent.getStringExtra(ShowExpensesAdapter.ShowExpenseAmountKey);
+        String Date = intent.getStringExtra(ShowExpensesAdapter.ShowExpenseDateKey);
+        String Description =intent.getStringExtra(ShowExpensesAdapter.ShowExpenseDescriptionKey);
 
         //Getting Elements from xml
         TextView title = findViewById(R.id.Title_Show_Expenses_in_Detail);
         TextView amount = findViewById(R.id.Amount_show_expsense_in_details);
         TextView date = findViewById(R.id.Date_show_Expenses_in_details);
-        TextView desc=findViewById(R.id.Description_show_expenses_in_detail);
-        ImageView back=findViewById(R.id.back_Show_expenses_in_detail);
+        TextView desc = findViewById(R.id.Description_show_expenses_in_detail);
+        ImageView back = findViewById(R.id.back_Show_expenses_in_detail);
 
         //Exporting Data
         title.setText(Title);

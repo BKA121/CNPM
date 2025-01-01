@@ -19,10 +19,10 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
     //Initialization
     List<expense>expenseList;
     //Declaring keys for sharing in intent
-    public  static  String ShowExpenseTitleKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Title";
-    public  static  String ShowExpenseAmountKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Amount";
-    public  static  String ShowExpenseDateKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Date";
-    public  static  String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Description";
+    public static String ShowExpenseTitleKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Title";
+    public static String ShowExpenseAmountKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Amount";
+    public static String ShowExpenseDateKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Date";
+    public static String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Description";
     Context context;
 
     //constructor for context
@@ -50,7 +50,7 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
-        final private  TextView Title,Amount,Date;
+        final private TextView Title,Amount,Date;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             //Setting On click listener for the items

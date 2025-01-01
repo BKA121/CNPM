@@ -21,16 +21,12 @@ public class balance {
     }
 
     public balance(String title, String amount, String day, String month, String year) {
-
         this.amount = amount;
         this.day = day;
         this.month = month;
         this.year = year;
         this.title=title;
-
     }
-
-
     public String getAmount() {
         return amount;
     }
@@ -40,29 +36,17 @@ public class balance {
     public void setAmount(String amount) {
         this.amount = amount;
     }
-
     public String getDay() {
         return day;
     }
-
     public void setDay(String day) {
         this.day = day;
     }
-
     public String getMonth() {
         return month;
     }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
-
     public String getYear() {
         return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
     public String getDate(){
         return (getDay()+"/"+getMonth()+"/"+getYear());
