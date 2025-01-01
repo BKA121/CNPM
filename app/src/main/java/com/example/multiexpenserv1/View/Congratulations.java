@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.multiexpenserv1.My_Goals;
+import com.example.multiexpenserv1.R;
 
 public class Congratulations extends AppCompatActivity {
 

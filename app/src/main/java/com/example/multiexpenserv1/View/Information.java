@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.multiexpenserv1.NotificationSettingsActivity;
+import com.example.multiexpenserv1.R;
 
 public class Information extends AppCompatActivity {
 

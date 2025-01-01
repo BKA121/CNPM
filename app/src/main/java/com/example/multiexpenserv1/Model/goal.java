@@ -32,7 +32,7 @@ public class goal {
 
 
     public  String getAmountWithRS(){
-        return "RS "+Amount;
+        return Amount + " VND";
     }
 
     public String getTitle() {

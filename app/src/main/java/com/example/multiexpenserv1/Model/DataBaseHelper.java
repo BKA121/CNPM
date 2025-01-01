@@ -46,6 +46,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT,STATUS TEXT,ID INTEGER PRIMARY KEY, AUTO INCREMENT);";
         //For executing the sql statement
         db.execSQL(CreateTableGoalStatement);
+
     }
 
     @Override

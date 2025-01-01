@@ -29,13 +29,13 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Information"
+            android:name=".View.Information"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <receiver android:name=".NotificationReceiver" />
 
-        <activity android:name=".Congratulations" />
+        <activity android:name=".View.Congratulations" />
         <activity android:name=".Show_Goals_In_Details" />
         <activity android:name=".View.Show_Expenses_In_Details" />
         <activity android:name=".My_Goals" />
@@ -62,7 +62,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivityView"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 

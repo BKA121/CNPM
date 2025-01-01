@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import android.widget.ImageView;
 
 import com.example.multiexpenserv1.View.Balance_in;
-import com.example.multiexpenserv1.Information;
+import com.example.multiexpenserv1.View.Information;
 import com.example.multiexpenserv1.Model.User;
 import com.example.multiexpenserv1.New_Goal;
 import com.example.multiexpenserv1.View.Chart;

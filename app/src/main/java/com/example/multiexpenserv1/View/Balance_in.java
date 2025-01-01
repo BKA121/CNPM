@@ -53,14 +53,14 @@ public class Balance_in extends AppCompatActivity {
             boolean isBalanceConsistent = true;
             //Checking if only one operation is selected
             if(isMinusOperationDone && isAddOperationDone){
-                Snackbar snackbar = Snackbar.make(v,"Choose either add or minus !!!",Snackbar.LENGTH_LONG);
+                Snackbar snackbar=Snackbar.make(v,"Hãy chọn thêm hoặc bớt !!!",Snackbar.LENGTH_LONG);
+
                 snackbar.show();
                 //Resetting values , so users can select the operation again
-                isAddOperationDone = false;
-                isMinusOperationDone = false;
-            }
-            else if(!isMinusOperationDone && !isAddOperationDone){
-                Snackbar snackbar=Snackbar.make(v,"Choose At least one add or minus !!!",Snackbar.LENGTH_LONG);
+                isAddOperationDone=false;
+                isMinusOperationDone=false;
+            } else if(!isMinusOperationDone && !isAddOperationDone){
+                Snackbar snackbar=Snackbar.make(v,"Hãy chọn thêm hoặc bớt !!!",Snackbar.LENGTH_LONG);
                 snackbar.show();
             }
             else {
@@ -101,12 +101,12 @@ public class Balance_in extends AppCompatActivity {
         });
         controller.handleButtonClicks(Transactions,Back);
         Add.setOnClickListener(v -> {
-            isAddOperationDone = true;
-            Toast.makeText(Balance_in.this, "Balance will be Added , Please Save !", Toast.LENGTH_LONG).show();
+            isAddOperationDone=true;
+            Toast.makeText(Balance_in.this, "Số dư của bạn sẽ được cộng, vui lòng lưu lại !", Toast.LENGTH_LONG).show();
         });
         Minus.setOnClickListener(v -> {
             isMinusOperationDone = true;
-            Toast.makeText(Balance_in.this, "Balance will be Subtracted , Please Save !", Toast.LENGTH_LONG).show();
+            Toast.makeText(Balance_in.this, "Số dư của bạn sẽ bị trừ, vui lòng lưu lại !", Toast.LENGTH_LONG).show();
         });
     }
 }
