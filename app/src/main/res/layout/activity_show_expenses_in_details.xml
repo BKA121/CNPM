@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#053E57"
-    tools:context=".Show_Expenses_In_Details">
+    tools:context=".View.Show_Expenses_In_Details">
 
     <View
         android:id="@+id/view4"

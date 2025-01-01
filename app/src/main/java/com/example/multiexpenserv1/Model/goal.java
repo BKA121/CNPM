@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.muc_tieu;
+package com.example.multiexpenserv1.Model;
 
 public class goal {
     private int ID;
@@ -32,7 +32,7 @@ public class goal {
 
 
     public  String getAmountWithRS(){
-        return "RS "+Amount;
+        return Amount + " VND";
     }
 
     public String getTitle() {

@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
-import com.example.multiexpenserv1.ql_expensive.expense;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.expense;
 
 import java.util.List;
 
@@ -21,10 +21,10 @@ public class Show_Expenses extends AppCompatActivity {
         setContentView(R.layout.activity_show_expenses);
 
         recyclerView = findViewById(R.id.Show_Expenses_Recycler_View);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         List<expense> expenseList=db.getAllExpenses();
         ShowExpensesAdapter adapter=new ShowExpensesAdapter(expenseList,this);
         recyclerView.setAdapter(adapter);
-
     }
 }

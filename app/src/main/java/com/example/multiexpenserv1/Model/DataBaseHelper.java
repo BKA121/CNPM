@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.data;
+package com.example.multiexpenserv1.Model;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,10 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import com.example.multiexpenserv1.muc_tieu.goal;
-import com.example.multiexpenserv1.ql_balance.balance;
-import com.example.multiexpenserv1.ql_expensive.expense;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +46,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String CreateTableGoalStatement= "CREATE TABLE  GOAL(TITLE TEXT,AMOUNT TEXT,TYPE TEXT, DAY TEXT, MONTH TEXT,YEAR TEXT,STATUS TEXT,ID INTEGER PRIMARY KEY, AUTO INCREMENT);";
         //For executing the sql statement
         db.execSQL(CreateTableGoalStatement);
+
     }
 
     @Override
@@ -84,12 +81,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         ContentValues cv=new ContentValues();
 
         // Putting content values with corresponding to the column names
-       cv.put(TITLE,obj.getTitle());
+        cv.put(TITLE,obj.getTitle());
         cv.put(AMOUNT,obj.getAmount());
         cv.put(DAY,obj.getDay());
         cv.put(MONTH,obj.getMonth());
         cv.put(YEAR,obj.getYear());
-       cv.put(STATUS,obj.getStatus());
+        cv.put(STATUS,obj.getStatus());
         //Inserting values into the table
         // Sử dụng try-with-resources cho SQLiteDatabase
         try (SQLiteDatabase db = this.getWritableDatabase()) {
@@ -201,7 +198,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 //            // loop through the cursor and create a new class objects. put them into the return list
                 do {
 //                taking data from columns
-
                     String Title=cursor.getString(0);
                     String Type=cursor.getString(1);
                     String Amount = cursor.getString(2);

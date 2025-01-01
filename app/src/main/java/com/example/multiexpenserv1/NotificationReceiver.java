@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.nhac_nho;
+package com.example.multiexpenserv1;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,8 +13,6 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-
-import com.example.multiexpenserv1.R;
 
 public class NotificationReceiver extends BroadcastReceiver {
 

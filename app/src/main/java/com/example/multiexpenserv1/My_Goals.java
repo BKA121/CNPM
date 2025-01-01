@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
-import com.example.multiexpenserv1.muc_tieu.goal;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.goal;
 
 import java.util.List;
 
@@ -19,8 +19,10 @@ public class My_Goals extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_goals);
+
         recyclerView = findViewById(R.id.My_Goals_Recycler_View);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         List<goal> goalsList=db.getAllGoals();
         MyGoals_Adapter adapter=new MyGoals_Adapter(goalsList,this);
         recyclerView.setAdapter(adapter);

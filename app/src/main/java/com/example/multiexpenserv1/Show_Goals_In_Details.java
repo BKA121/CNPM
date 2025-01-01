@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.multiexpenserv1.data.DataBaseHelper;
+import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.View.Congratulations;
 
 import java.util.Objects;
 
@@ -52,7 +53,7 @@ public class Show_Goals_In_Details extends AppCompatActivity {
         //Setting On Click listener for the Change Status Button
         ChangeStatus.setOnClickListener(v -> {
             db.ChangeGoalStatus(intent.getIntExtra(MyGoals_Adapter.Show_Goals_ID,-1));
-            startActivity(new Intent(Show_Goals_In_Details.this,Congratulations.class));
+            startActivity(new Intent(Show_Goals_In_Details.this, Congratulations.class));
             finish();
         });
     }
