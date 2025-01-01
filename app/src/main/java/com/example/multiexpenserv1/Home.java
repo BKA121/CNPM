@@ -36,8 +36,8 @@ public class Home extends AppCompatActivity {
         cbalance=sharedPreferences.getString("Current_Balance","");
 
         // Setting textview on the home screen
-        name.setText("Welcome "+fname);
-        balance.setText("RS "+cbalance);
+        name.setText("Xin chào "+fname);
+        balance.setText(cbalance + " VND");
 
         //Share activity
         share.setOnClickListener(v -> {

@@ -42,7 +42,7 @@ public class Balance_in extends AppCompatActivity {
         SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         Original_Balance=sharedPreferences.getString("Current_Balance","");
-        Current_Balance_Balance_in.setText("RS "+Original_Balance);
+        Current_Balance_Balance_in.setText(Original_Balance + " VND");
 
         //Setting click listener for showing transactions
         Transactions.setOnClickListener(v -> startActivity(new Intent(Balance_in.this,show_transactions.class)));
