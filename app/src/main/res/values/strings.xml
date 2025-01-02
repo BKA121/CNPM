@@ -79,4 +79,6 @@
     <string name="hint_remind">Nhập nội dung nhắc nhở</string>
     <string name="nd_nhacnhor">Nội dụng nhắc nhở</string>
     <string name="setup_notif">Cài đặt thông báo</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="setup_notification">Thiết lập Thông Báo</string>
 </resources>

@@ -38,13 +38,13 @@
         <activity android:name=".View.Congratulations" />
         <activity android:name=".Show_Goals_In_Details" />
         <activity android:name=".View.Show_Expenses_In_Details" />
-        <activity android:name=".My_Goals" />
-        <activity android:name=".show_transactions" />
-        <activity android:name=".Show_Expenses" />
-        <activity android:name=".New_Goal" />
+        <activity android:name=".Controller.My_GoalsController" />
+        <activity android:name=".View.show_transactions" />
+        <activity android:name=".View.Show_Expenses" />
+        <activity android:name=".View.New_goalView" />
         <activity android:name=".View.Balance_in" />
-        <activity android:name=".Success" />
-        <activity android:name=".new_expense_in" />
+        <activity android:name=".View.Success" />
+        <activity android:name=".View.new_expense_in" />
         <activity
             android:name=".View.GettingStarted_two"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -52,7 +52,7 @@
             android:name=".View.Home"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".SplashScreenv1"
+            android:name=".View.SplashScreenv1"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
