@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import com.example.multiexpenserv1.View.Balance_in;
 import com.example.multiexpenserv1.View.Information;
 import com.example.multiexpenserv1.Model.User;
-import com.example.multiexpenserv1.New_Goal;
 import com.example.multiexpenserv1.View.Chart;
+import com.example.multiexpenserv1.View.New_goalView;
 import com.example.multiexpenserv1.new_expense_in;
 
 public class HomeController {
@@ -48,7 +48,7 @@ public class HomeController {
     }
 
     public void navigateToGoals() {
-        Intent intent = new Intent(context, New_Goal.class);
+        Intent intent = new Intent(context, New_goalView.class);
         context.startActivity(intent);
     }
 
