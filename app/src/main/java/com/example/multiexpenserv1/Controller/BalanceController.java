@@ -1,37 +1,40 @@
 package com.example.multiexpenserv1.Controller;
 
-
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.multiexpenserv1.Model.DataBaseHelper;
+import com.example.multiexpenserv1.Model.UserSettings;
 import com.example.multiexpenserv1.Model.balance;
 import com.example.multiexpenserv1.View.Balance_in;
 import com.example.multiexpenserv1.View.Home;
-import com.example.multiexpenserv1.new_expense_in;
 import com.example.multiexpenserv1.show_transactions;
 
 public class BalanceController {
     private final Context context;
-    private final SharedPreferences sharedPreferences;
-    private final SharedPreferences.Editor editor;
+    private UserSettings userSettings;
 
     public BalanceController(Context context) {
         this.context = context;
-        this.sharedPreferences = context.getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE);
-        this.editor = sharedPreferences.edit();
+        userSettings = new UserSettings(context);
     }
     // Lấy số dư hiện tại
     public String getCurrentBalance() {
-        return sharedPreferences.getString("Current_Balance", "0");
+        return userSettings.getCurrentBalance();
+    }
+    public String getFirstName() {
+        return userSettings.getFirstName();
+    }
+    public String getLastName() {
+        return userSettings.getLastName();
+    }
+    public String getEmail() {
+        return userSettings.getEmail();
     }
     // Cập nhật số dư
     public void updateBalance(int updatedBalance) {
-        editor.putString("Current_Balance", String.valueOf(updatedBalance));
-        editor.apply();
+        userSettings.updateBalance(updatedBalance);
     }
     // Lưu giao dịch vào cơ sở dữ liệu
     public boolean saveTransaction(balance transaction) {

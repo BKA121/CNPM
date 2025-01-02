@@ -5,7 +5,6 @@ import android.content.Context;
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.expense;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -39,7 +38,6 @@ public class ChartController {
         }
         return dailyExpenses;
     }
-
     public int getDaysInMonth() {
         return daysInMonth;
     }

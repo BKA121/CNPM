@@ -131,9 +131,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
              Cursor cursor = db.rawQuery(query, null)) {
             //Check if the cursor has successfully fetched the results
             if (cursor.moveToFirst()) {
-                //            // loop through the cursor and create a new class objects. put them into the return list
+                // loop through the cursor and create a new class objects. put them into the return list
                 do {
-                    //                taking data from columns
+                    // taking data from columns
                     String Title = cursor.getString(0);
                     String Amount = cursor.getString(1);
                     String Day = cursor.getString(2);

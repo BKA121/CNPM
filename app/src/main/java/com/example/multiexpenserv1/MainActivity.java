@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Checking for Onboard process
-        SharedPreferences sharedPreferences=getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE",MODE_PRIVATE);
         String FirstTime=sharedPreferences.getString("FirstTimeInstalled","");
 
         if(FirstTime.equals("Yes")) {
