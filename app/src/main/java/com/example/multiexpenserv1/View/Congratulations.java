@@ -7,7 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.multiexpenserv1.My_Goals;
+import com.example.multiexpenserv1.Controller.My_GoalsController;
 import com.example.multiexpenserv1.R;
 
 public class Congratulations extends AppCompatActivity {
@@ -22,7 +22,7 @@ public class Congratulations extends AppCompatActivity {
         mediaPlayer.setOnCompletionListener(MediaPlayer::release);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(Congratulations.this, My_Goals.class);
+            Intent intent = new Intent(Congratulations.this, My_GoalsController.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();

@@ -45,6 +45,7 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
         holder.Title.setText(goalsList.get(position).getTitle());
         holder.Amount.setText(goalsList.get(position).getAmountWithRS());
         holder.Date.setText(goalsList.get(position).getDate());
+
     }
 
     //to get count
