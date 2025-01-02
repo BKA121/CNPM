@@ -14,8 +14,8 @@ import com.example.multiexpenserv1.View.MainActivityView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivityController {
-    private Context context;
-    private Login model;
+    private final Context context;
+    private final Login model;
 
     public MainActivityController(Context context) {
         this.context = context;

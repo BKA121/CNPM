@@ -14,8 +14,8 @@ import com.example.multiexpenserv1.View.New_goalView;
 import com.example.multiexpenserv1.View.new_expense_in;
 
 public class HomeController {
-    private Context context;
-    private SharedPreferences sharedPreferences;
+    private final Context context;
+    private final SharedPreferences sharedPreferences;
     public HomeController(Context context) {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE);
