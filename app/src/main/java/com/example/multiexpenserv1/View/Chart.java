@@ -40,7 +40,7 @@ public class Chart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_line_chart);
 
-        lineChart= findViewById(R.id.lineChart);
+        lineChart = findViewById(R.id.lineChart);
         minExpenseText = findViewById(R.id.minExpenseText);
         maxExpenseText = findViewById(R.id.maxExpenseText);
         totalExpenseText = findViewById(R.id.totalExpenseText);

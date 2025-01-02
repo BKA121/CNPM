@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.goal;
 import com.example.multiexpenserv1.View.Home;
+import com.example.multiexpenserv1.View.Success;
 import com.google.android.material.snackbar.Snackbar;
 
 public class New_Goal extends AppCompatActivity {

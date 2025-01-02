@@ -104,7 +104,6 @@ public class NotificationSettingsActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Không thể đặt thông báo. Vui lòng thử lại!", Toast.LENGTH_SHORT).show();
         }
-
     }
     private void setDailyNotification(AlarmManager alarmManager, Calendar calendar, PendingIntent pendingIntent) {
         // Khoảng thời gian lặp lại là 1 ngày (tính bằng milliseconds)

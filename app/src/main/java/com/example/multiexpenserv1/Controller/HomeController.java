@@ -10,11 +10,11 @@ import com.example.multiexpenserv1.View.Information;
 import com.example.multiexpenserv1.Model.User;
 import com.example.multiexpenserv1.New_Goal;
 import com.example.multiexpenserv1.View.Chart;
-import com.example.multiexpenserv1.new_expense_in;
+import com.example.multiexpenserv1.View.new_expense_in;
 
 public class HomeController {
-    private Context context;
-    private SharedPreferences sharedPreferences;
+    private final Context context;
+    private final SharedPreferences sharedPreferences;
     public HomeController(Context context) {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE);

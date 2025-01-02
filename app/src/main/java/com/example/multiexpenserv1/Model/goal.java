@@ -29,8 +29,6 @@ public class goal {
         Month = month;
         Year = year;
     }
-
-
     public  String getAmountWithRS(){
         return Amount + " VND";
     }

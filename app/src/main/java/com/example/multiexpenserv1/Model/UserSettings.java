@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 public class UserSettings {
 
     private static final String PREFERENCE_NAME = "PREFERENCE";
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
     public UserSettings(Context context) {

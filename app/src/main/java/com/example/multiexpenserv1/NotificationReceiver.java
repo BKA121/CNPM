@@ -49,7 +49,8 @@ public class NotificationReceiver extends BroadcastReceiver {
         if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS)
                 == PackageManager.PERMISSION_GRANTED) {
             notificationManager.notify(1, builder.build());
-        } if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+        }
+        if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
             // Nếu thiếu quyền, không thực hiện gửi thông báo
             Toast.makeText(context, "Cần cấp quyền thông báo để nhận lịch trình nhắc nhở", Toast.LENGTH_SHORT).show();
 
@@ -60,6 +61,5 @@ public class NotificationReceiver extends BroadcastReceiver {
             // Bạn có thể yêu cầu lại quyền tại đây nếu cần thiết hoặc thông báo cho người dùng
             // Cần phải có cách xử lý yêu cầu quyền động từ Activity
         }
-
     }
 }

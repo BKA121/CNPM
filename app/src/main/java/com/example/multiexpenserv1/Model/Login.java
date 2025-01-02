@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Login {
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
     public Login(Context context) {

@@ -2,7 +2,10 @@ package com.example.multiexpenserv1.Model;
 
 public class balance {
     private String title,amount;
-    private String day,month,year,status;
+    private String day;
+    private final String month;
+    private final String year;
+    private String status;
 
     public String getTitle() {
         return title;

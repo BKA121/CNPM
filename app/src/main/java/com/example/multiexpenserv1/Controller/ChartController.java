@@ -9,8 +9,8 @@ import java.util.Calendar;
 import java.util.List;
 
 public class ChartController {
-    private DataBaseHelper dbHelper;
-    private int daysInMonth;
+    private final DataBaseHelper dbHelper;
+    private final int daysInMonth;
 
     public ChartController(Context context) {
         dbHelper = new DataBaseHelper(context);
@@ -19,7 +19,6 @@ public class ChartController {
         Calendar calendar = Calendar.getInstance();
         daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
     }
-
     public List<expense> getAllExpenses() {
         return dbHelper.getAllExpenses();
     }

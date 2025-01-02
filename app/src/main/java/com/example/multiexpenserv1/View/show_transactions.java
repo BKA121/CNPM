@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.balance;
+import com.example.multiexpenserv1.R;
+import com.example.multiexpenserv1.Show_Transactions_Adapter;
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class show_transactions extends AppCompatActivity {
         setContentView(R.layout.activity_show_transactions);
         recyclerView = findViewById(R.id.show_transactions_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List<balance> balanceList=db.getAllBalance();
+        List<balance> balanceList = db.getAllBalance();
         Show_Transactions_Adapter adapter=new Show_Transactions_Adapter(balanceList,this);
         recyclerView.setAdapter(adapter);
     }

@@ -1,8 +1,8 @@
 package com.example.multiexpenserv1.Model;
 
 public class User {
-    private String firstName;
-    private String currentBalance;
+    private final String firstName;
+    private final String currentBalance;
 
     public User(String firstName, String currentBalance) {
         this.firstName = firstName;

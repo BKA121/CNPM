@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.multiexpenserv1.View.MainActivityView;
+import com.example.multiexpenserv1.R;
 
 public class SplashScreenv1 extends AppCompatActivity {
 

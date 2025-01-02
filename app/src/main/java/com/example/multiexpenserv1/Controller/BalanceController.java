@@ -3,17 +3,21 @@ package com.example.multiexpenserv1.Controller;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.UserSettings;
 import com.example.multiexpenserv1.Model.balance;
 import com.example.multiexpenserv1.View.Balance_in;
 import com.example.multiexpenserv1.View.Home;
-import com.example.multiexpenserv1.show_transactions;
+import com.example.multiexpenserv1.View.show_transactions;
+import com.google.android.material.snackbar.Snackbar;
 
 public class BalanceController {
     private final Context context;
-    private UserSettings userSettings;
+    private final UserSettings userSettings;
+    boolean isAddOperationDone = false;
+    boolean isMinusOperationDone = false;
 
     public BalanceController(Context context) {
         this.context = context;
@@ -51,6 +55,58 @@ public class BalanceController {
             finish();
         }
     }
+    public void  activity_Add(){
+        isAddOperationDone = true;
+        Toast.makeText(context, "Số dư của bạn sẽ được cộng, vui lòng lưu lại !", Toast.LENGTH_LONG).show();
+    }
+    public void  activity_Minus(){
+        isMinusOperationDone = true;
+        Toast.makeText(context, "Số dư của bạn sẽ bị trừ, vui lòng lưu lại !", Toast.LENGTH_LONG).show();
+    }
+    public void activity_Save(String title, String amount, String day, String month, String year, ImageView v){
+
+        boolean isBalanceConsistent = true;
+        if (!(title.isEmpty() || amount.isEmpty() || day.isEmpty() || month.isEmpty() || year.isEmpty())) {
+            if(isMinusOperationDone && isAddOperationDone){
+                Snackbar snackbar = Snackbar.make(v,"Hãy chọn thêm hoặc bớt !!!",Snackbar.LENGTH_LONG);
+                snackbar.show();
+
+                isAddOperationDone = false;
+                isMinusOperationDone = false;
+            } else if(!isMinusOperationDone && !isAddOperationDone){
+                Snackbar snackbar = Snackbar.make(v,"Hãy chọn thêm hoặc bớt !!!",Snackbar.LENGTH_LONG);
+                snackbar.show();
+            } else {
+                balance transaction = new balance(title, amount, day, month, year);
+                int valueBalance = Integer.parseInt(getCurrentBalance());
+                String Amount_String = amount;
+
+                if (Amount_String.isEmpty()) {
+                    Snackbar snackbar = Snackbar.make(v, "Vui lòng điền chi tiết số tiền !!!", Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else {
+                    int amount_t = Integer.parseInt(Amount_String);
+                    if (isAddOperationDone) {
+                        valueBalance += amount_t;
+                        updateBalance(valueBalance);
+                        transaction.setStatus("Deposit");
+                    } else if (isMinusOperationDone && valueBalance >= amount_t) {
+                        valueBalance -= amount_t;
+                        updateBalance(valueBalance);
+                        transaction.setStatus("Withdraw");
+                    } else if (isMinusOperationDone && valueBalance < amount_t) {
+                        Toast.makeText(context, "Số dư hiện không đủ !", Toast.LENGTH_LONG).show();
+                        isBalanceConsistent = false;
+                        transaction.setStatus("Withdraw");
+                    }
+                }
+                navigateToSuccess(transaction, isBalanceConsistent);
+            }
+        } else {
+            Snackbar snackbar = Snackbar.make(v, "Vui lòng điền đầy đủ thông tin !", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
+    }
     public void navigateToShowTransactions() {
         Intent intent = new Intent(context, show_transactions.class);
         context.startActivity(intent);
@@ -63,7 +119,6 @@ public class BalanceController {
     private void finish() {
         ((Balance_in) context).finish();
     }
-
     public void handleButtonClicks(ImageView transactions, ImageView back) {
         transactions.setOnClickListener(v -> navigateToShowTransactions());
         back.setOnClickListener(v -> navigateToHome());
