@@ -2,6 +2,7 @@ package com.example.multiexpenserv1.Controller;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -63,7 +64,13 @@ public class BalanceController {
         isMinusOperationDone = true;
         Toast.makeText(context, "Số dư của bạn sẽ bị trừ, vui lòng lưu lại !", Toast.LENGTH_LONG).show();
     }
-    public void activity_Save(String title, String amount, String day, String month, String year, ImageView v){
+    public void activity_Save(EditText Title, EditText Amount, EditText Day, EditText Month, EditText Year, ImageView v){
+
+        String title = Title.getText().toString();
+        String amount = Amount.getText().toString();
+        String day = Day.getText().toString();
+        String month = Month.getText().toString();
+        String year = Year.getText().toString();
 
         boolean isBalanceConsistent = true;
         if (!(title.isEmpty() || amount.isEmpty() || day.isEmpty() || month.isEmpty() || year.isEmpty())) {

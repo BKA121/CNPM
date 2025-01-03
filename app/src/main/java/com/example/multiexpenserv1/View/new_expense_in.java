@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.service.quicksettings.Tile;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -41,13 +42,6 @@ public class new_expense_in extends AppCompatActivity {
         newExpenseController = new NewExpenseController(this);
         newExpenseController.handleButtonClicks(show_expenses, back);
 
-        String title = Title.getText().toString();
-        String amount = Amount.getText().toString();
-        String day = Day.getText().toString();
-        String month = Month.getText().toString();
-        String year = Year.getText().toString();
-        String description = Description.getText().toString();
-
-        save.setOnClickListener(v -> newExpenseController.activity_Save(title, amount, day, month, year, description, save));
+        save.setOnClickListener(v -> newExpenseController.activity_Save(Title, Amount, Day, Month, Year, Description, save));
     }
 }

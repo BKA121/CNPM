@@ -35,13 +35,7 @@ public class Balance_in extends AppCompatActivity {
         controller = new BalanceController(this);
         Current_Balance_Balance_in.setText(controller.getCurrentBalance()+ " VND");
 
-        //Storing data from the edit text into the strings
-        String title = Title.getText().toString();
-        String amount = Amount.getText().toString();
-        String day = Day.getText().toString();
-        String month = Month.getText().toString();
-        String year = Year.getText().toString();
-        Save.setOnClickListener(v -> controller.activity_Save(title, amount, day, month, year, Save));
+        Save.setOnClickListener(v -> controller.activity_Save(Title,Amount,Day,Month,Year, Save));
 
         controller.handleButtonClicks(Transactions,Back);
         Add.setOnClickListener(v -> controller.activity_Add());
