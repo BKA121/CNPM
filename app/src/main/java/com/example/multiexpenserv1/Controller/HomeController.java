@@ -21,9 +21,9 @@ public class HomeController {
         sharedPreferences = context.getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE);
     }
     public User getUserData() {
-        String firstName = sharedPreferences.getString("First_Name", "");
+        String lastName = sharedPreferences.getString("Last_Name", "");
         String currentBalance = sharedPreferences.getString("Current_Balance", "");
-        return new User(firstName, currentBalance);
+        return new User(lastName, currentBalance);
     }
 
     // Xử lý sự kiện nhấn nút

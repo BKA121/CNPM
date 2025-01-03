@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity {
 
         // Lấy thông tin người dùng và hiển thị
         user = homeController.getUserData();
-        name.setText("Xin chào " + user.getFirstName());
+        name.setText("Xin chào " + user.getLastName());
         balance.setText(user.getCurrentBalance() + " VND");
 
         // Xử lý sự kiện nhấn nút

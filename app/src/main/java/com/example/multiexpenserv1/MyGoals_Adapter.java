@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.multiexpenserv1.Model.goal;
+import com.example.multiexpenserv1.View.Show_Goals_In_DetailsView;
 
 import java.util.List;
 
@@ -19,12 +20,12 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
     List<goal>goalsList;
     Context context;
     //Defining some keys
-    public static String Show_Goals_Title=" com.example.multiexpenserv1.Show_Goals_In_Details.Title";
-    public static String Show_Goals_Amount=" com.example.multiexpenserv1.Show_Goals_In_Details.Amount";
-    public static String Show_Goals_Category=" com.example.multiexpenserv1.Show_Goals_In_Details.Category";
-    public static String Show_Goals_Date=" com.example.multiexpenserv1.Show_Goals_In_Details.Date";
-    public static String Show_Goals_Status=" com.example.multiexpenserv1.Show_Goals_In_Details.Status";
-    public static String Show_Goals_ID=" com.example.multiexpenserv1.Show_Goals_In_Details.ID";
+    public static String Show_Goals_Title=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.Title";
+    public static String Show_Goals_Amount=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.Amount";
+    public static String Show_Goals_Category=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.Category";
+    public static String Show_Goals_Date=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.Date";
+    public static String Show_Goals_Status=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.Status";
+    public static String Show_Goals_ID=" com.example.multiexpenserv1.Show_Goals_In_DetailsView.ID";
 
     //constructor for context
     public MyGoals_Adapter(List<goal> goalsList, Context context) {
@@ -76,7 +77,7 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
             goal obj=goalsList.get(position);
 
             //Declaring intent
-            Intent intent=new Intent(context,Show_Goals_In_Details.class);
+            Intent intent=new Intent(context, Show_Goals_In_DetailsView.class);
 
             //Initializing values from object
             String Title,Amount,Date,Status,Category;

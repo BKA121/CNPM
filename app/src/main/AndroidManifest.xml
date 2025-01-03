@@ -36,7 +36,7 @@
         <receiver android:name=".NotificationReceiver" />
 
         <activity android:name=".View.Congratulations" />
-        <activity android:name=".Show_Goals_In_Details" />
+        <activity android:name=".View.Show_Goals_In_DetailsView" />
         <activity android:name=".View.Show_Expenses_In_Details" />
         <activity android:name=".Controller.My_GoalsController" />
         <activity android:name=".View.show_transactions" />

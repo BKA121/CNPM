@@ -221,7 +221,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     //Changing Goal status
     public void ChangeGoalStatus(int key){
-        String query="UPDATE  GOAL SET  STATUS = 'ACHIEVED' WHERE  ID = "+ key +" ;";
+        String query="UPDATE  GOAL SET  STATUS = 'Hoàn thành' WHERE  ID = "+ key +" ;";
         // Sử dụng try-with-resources cho SQLiteDatabase
         try (SQLiteDatabase db = this.getWritableDatabase()) {
             db.execSQL(query);

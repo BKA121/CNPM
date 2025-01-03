@@ -37,9 +37,9 @@ public class New_goalController {
 
         // Nếu tất cả điều kiện hợp lệ
         if (isBalanceConsistent) {
-            // Tạo đối tượng Goal với trạng thái mặc định "PENDING"
+            // Tạo đối tượng Goal với trạng thái mặc định "Đang chờ"
             goal Goal = new goal(title, amount, type, day, month, year);
-            Goal.setStatus("PENDING");
+            Goal.setStatus("Đang chờ");
 
             // Lưu vào cơ sở dữ liệu
             DataBaseHelper db = new DataBaseHelper(view);

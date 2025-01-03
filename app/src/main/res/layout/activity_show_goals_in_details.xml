@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Show_Goals_In_Details">
+    tools:context=".View.Show_Goals_In_DetailsView">
 
     <ImageView
         android:id="@+id/imageView58"
