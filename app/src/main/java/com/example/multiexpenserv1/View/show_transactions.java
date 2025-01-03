@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.balance;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.Show_Transactions_Adapter;
+import com.example.multiexpenserv1.Adapter.Show_Transactions_Adapter;
 
 import java.util.List;
 

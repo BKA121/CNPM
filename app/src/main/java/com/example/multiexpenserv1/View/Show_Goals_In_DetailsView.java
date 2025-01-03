@@ -10,8 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.multiexpenserv1.Controller.Show_Goals_In_DetailsController;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.Model.DataBaseHelper;
-import com.example.multiexpenserv1.MyGoals_Adapter;
+import com.example.multiexpenserv1.Adapter.MyGoals_Adapter;
 import java.util.Objects;
 
 public class Show_Goals_In_DetailsView extends AppCompatActivity {

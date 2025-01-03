@@ -2,6 +2,7 @@ package com.example.multiexpenserv1.View;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -53,6 +54,7 @@ public class Chart extends AppCompatActivity {
         float[] dailyExpenses = chartController.calculateDailyExpenses();
 
         // Tạo dữ liệu cho biểu đồ đường
+        lineDataSet = new LineDataSet(entries, "Dữ liệu cho 30 ngày");
         entries = new ArrayList<>();
         for (int i = 0; i < daysInMonth; i++) {
             if (dailyExpenses[i] != 0) { // Chỉ thêm giá trị khác 0
@@ -68,7 +70,6 @@ public class Chart extends AppCompatActivity {
                 entries.add(new Entry(i + 1, dailyExpenses[i])); // Gán chi tiêu cho từng ngày, bắt đầu từ 1
             }
         }
-
         minExpenseText.setText("Ngày chi tiêu ít nhất: " + minExpenseDay + " (" + minExpense + " VND)");
         maxExpenseText.setText("Ngày chi tiêu nhiều nhất: " + maxExpenseDay + " (" + maxExpense + " VND)");
         totalExpenseText.setText("Tổng chi tiêu: " + totalExpenses + " VND");

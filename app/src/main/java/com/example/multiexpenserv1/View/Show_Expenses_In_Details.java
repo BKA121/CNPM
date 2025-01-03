@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.ShowExpensesAdapter;
+import com.example.multiexpenserv1.Adapter.ShowExpensesAdapter;
 
 public class Show_Expenses_In_Details extends AppCompatActivity {
 

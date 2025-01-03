@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.multiexpenserv1.Model.expense;
+import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.View.Show_Expenses_In_Details;
 
 import java.util.List;
@@ -19,10 +20,10 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
     //Initialization
     List<expense>expenseList;
     //Declaring keys for sharing in intent
-    public static String ShowExpenseTitleKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Title";
-    public static String ShowExpenseAmountKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Amount";
-    public static String ShowExpenseDateKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Date";
-    public static String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.ShowExpensesAdapter.Description";
+    public static String ShowExpenseTitleKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Title";
+    public static String ShowExpenseAmountKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Amount";
+    public static String ShowExpenseDateKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Date";
+    public static String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Description";
     Context context;
 
     //constructor for context

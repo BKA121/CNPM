@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.goal;
-import com.example.multiexpenserv1.MyGoals_Adapter;
+import com.example.multiexpenserv1.Adapter.MyGoals_Adapter;
 import com.example.multiexpenserv1.R;
 
 import java.util.List;

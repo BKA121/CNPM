@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.Adapter;
 
 
 import android.app.Activity;
@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.multiexpenserv1.Model.goal;
+import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.View.Show_Goals_In_DetailsView;
 
 import java.util.List;

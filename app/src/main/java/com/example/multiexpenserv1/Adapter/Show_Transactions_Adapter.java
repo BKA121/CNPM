@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.Adapter;
 
 
 import android.content.Context;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.multiexpenserv1.Model.balance;
+import com.example.multiexpenserv1.R;
 
 import java.util.List;
 

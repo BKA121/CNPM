@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.example.multiexpenserv1.Model.DataBaseHelper;
 import com.example.multiexpenserv1.Model.expense;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.ShowExpensesAdapter;
+import com.example.multiexpenserv1.Adapter.ShowExpensesAdapter;
 
 import java.util.List;
 
