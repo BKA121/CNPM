@@ -2,6 +2,7 @@ package com.example.multiexpenserv1.Controller;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -37,9 +38,15 @@ public class NewExpenseController {
         context.startActivity(intent);
         finish();
     }
-    public void activity_Save(String title, String amount, String day, String month, String year, String description, ImageView v) {
-        boolean isBalanceConsistent = true;
+    public void activity_Save(EditText Title, EditText Amount, EditText Day, EditText Month, EditText Year, EditText Description, ImageView v) {
 
+        String title = Title.getText().toString();
+        String amount = Amount.getText().toString();
+        String day = Day.getText().toString();
+        String month = Month.getText().toString();
+        String year = Year.getText().toString();
+        String description = Description.getText().toString();
+        boolean isBalanceConsistent = true;
         //Checking whether the data fields are filled
         if(!(title.isEmpty()||amount.isEmpty()||day.isEmpty()||month.isEmpty()||year.isEmpty()||description.isEmpty())) {
 
