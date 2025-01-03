@@ -22,37 +22,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".View.NotificationSettingsActivity"
+            android:name=".View.Balance.NotificationSettings_V"
             android:exported="false" />
         <activity
-            android:name=".View.Chart"
+            android:name=".View.Chart.Chart_V"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".View.Information"
+            android:name=".View.Home.Information_V"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <receiver android:name=".Controller.NotificationReceiver" />
+        <receiver android:name=".Controller.Setting.NotificationReceiver_C" />
 
-        <activity android:name=".View.Congratulations" />
-        <activity android:name=".View.Show_Goals_In_DetailsView" />
-        <activity android:name=".View.Show_Expenses_In_Details" />
-        <activity android:name=".Controller.My_GoalsController" />
-        <activity android:name=".View.show_transactions" />
-        <activity android:name=".View.Show_Expenses" />
-        <activity android:name=".View.New_goalView" />
-        <activity android:name=".View.Balance_in" />
-        <activity android:name=".View.Success" />
-        <activity android:name=".View.new_expense_in" />
+        <activity android:name=".View.FlashScreen.Congratulations_V" />
+        <activity android:name=".View.Goal.Show_Goals_In_Details_V" />
+        <activity android:name=".View.Expenses.Show_Expenses_In_Details_V" />
+        <activity android:name=".Controller.Home.My_Goals_C" />
+        <activity android:name=".View.Balance.Show_Balance_V" />
+        <activity android:name=".View.Expenses.Show_Expenses_V" />
+        <activity android:name=".View.Goal.New_Goal_V" />
+        <activity android:name=".View.Balance.Balance_in_V" />
+        <activity android:name=".View.FlashScreen.Success_V" />
+        <activity android:name=".View.Expenses.New_Expense_in_V" />
         <activity
-            android:name=".View.GettingStarted_two"
+            android:name=".View.Login.Login_Balance_V"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".View.Home"
+            android:name=".View.Home.Home_V"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".View.SplashScreenv1"
+            android:name=".View.FlashScreen.SplashScreenv1_V"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -62,7 +62,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.MainActivityView"
+            android:name=".View.Login.Login_V"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 

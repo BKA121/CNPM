@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Controller.My_GoalsController">
+    tools:context=".Controller.Home.My_Goals_C">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/My_Goals_Recycler_View"
