@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".NotificationSettingsActivity"
+            android:name=".View.NotificationSettingsActivity"
             android:exported="false" />
         <activity
             android:name=".View.Chart"
@@ -33,7 +33,7 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <receiver android:name=".NotificationReceiver" />
+        <receiver android:name=".Controller.NotificationReceiver" />
 
         <activity android:name=".View.Congratulations" />
         <activity android:name=".View.Show_Goals_In_DetailsView" />

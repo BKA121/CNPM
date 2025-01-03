@@ -1,9 +1,5 @@
-package com.example.multiexpenserv1;
+package com.example.multiexpenserv1.View;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
+import com.example.multiexpenserv1.Controller.NotificationController;
+import com.example.multiexpenserv1.Model.NotificationSchedule;
+import com.example.multiexpenserv1.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -43,9 +43,15 @@ public class NotificationSettingsActivity extends AppCompatActivity {
             // Lấy giờ và phút từ TimePicker
             int hour = timePicker.getHour();
             int minute = timePicker.getMinute();
+            String content = etReminderContent.getText().toString();
 
             // Tạo Calendar với thời gian đã chọn
             Calendar calendar = Calendar.getInstance();
+
+            NotificationSchedule schedule = new NotificationSchedule(calendar, "Nhắc nhở", content);
+            NotificationController controller = new NotificationController(this);
+            controller.scheduleNotification(schedule);
+
             calendar.set(Calendar.HOUR_OF_DAY, hour);
             calendar.set(Calendar.MINUTE, minute);
             calendar.set(Calendar.SECOND, 0);
@@ -67,9 +73,8 @@ public class NotificationSettingsActivity extends AppCompatActivity {
                     return;
                 }
             }
-
             // Đặt lịch thông báo
-            setNotification(calendar);
+            controller.scheduleNotification(schedule);
         });
     }
     private void addToSpinnerFreq(){
@@ -80,42 +85,6 @@ public class NotificationSettingsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spFrequency.setAdapter(adapter);
     }
-
-    private void setNotification(Calendar calendar) {
-        // Tạo Intent và PendingIntent
-        Intent intent = new Intent(this, NotificationReceiver.class);
-        intent.putExtra("title", "Ngày hôm nay của bạn ổn chứ!?");
-        intent.putExtra("message", etReminderContent.getText());
-
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                this,
-                0,
-                intent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        // Sử dụng AlarmManager để đặt lịch
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        if (alarmManager != null) {
-            setDailyNotification(alarmManager, calendar, pendingIntent);
-        } else {
-            Toast.makeText(this, "Không thể đặt thông báo. Vui lòng thử lại!", Toast.LENGTH_SHORT).show();
-        }
-    }
-    private void setDailyNotification(AlarmManager alarmManager, Calendar calendar, PendingIntent pendingIntent) {
-        // Khoảng thời gian lặp lại là 1 ngày (tính bằng milliseconds)
-        long interval = AlarmManager.INTERVAL_DAY;
-
-        // Sử dụng setRepeating để đặt lịch lặp lại hằng ngày
-        alarmManager.setInexactRepeating(
-                AlarmManager.RTC_WAKEUP,       // Loại báo thức
-                calendar.getTimeInMillis(),    // Thời gian thông báo đầu tiên
-                interval,                      // Khoảng thời gian lặp lại
-                pendingIntent                  // PendingIntent chứa thông báo
-        );
-        Toast.makeText(this, "Thông báo hằng ngày đã được đặt!", Toast.LENGTH_SHORT).show();
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

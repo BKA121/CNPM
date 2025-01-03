@@ -9,8 +9,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.multiexpenserv1.Controller.BalanceController;
-import com.example.multiexpenserv1.Controller.MainActivityController;
-import com.example.multiexpenserv1.NotificationSettingsActivity;
 import com.example.multiexpenserv1.R;
 
 public class Information extends AppCompatActivity {
