@@ -17,8 +17,8 @@ public class Information extends AppCompatActivity {
 
     private TextView currentBalance;
     private TextView fullname;
-    private  String fname;
-    private  String lname;
+    private String fname;
+    private String lname;
     private TextView Notification_Settings;
     private TextView logout;
     private BalanceController balanceController;
