@@ -9,29 +9,29 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.multiexpenserv1.Model.Balance;
+import com.example.multiexpenserv1.Model.Balance.Balance;
 import com.example.multiexpenserv1.R;
 
 import java.util.List;
 
-public class Show_Transactions_Adapter extends RecyclerView.Adapter< Show_Transactions_Adapter.ViewHolder> {
+public class Show_Balance_Adapter extends RecyclerView.Adapter< Show_Balance_Adapter.ViewHolder> {
     List<Balance>balanceList;
     Context context;
 
     //constructor for context
-    public Show_Transactions_Adapter (List<Balance> balanceList, Context context) {
+    public Show_Balance_Adapter(List<Balance> balanceList, Context context) {
         this.balanceList =balanceList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public Show_Transactions_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Show_Balance_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.activity_show_transactions_layout,parent,false);
         return new ViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(@NonNull Show_Transactions_Adapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Show_Balance_Adapter.ViewHolder holder, int position) {
         holder.Title.setText(balanceList.get(position).getTitle());
         holder.Date.setText(balanceList.get(position).getDate());
         if(balanceList.get(position).getStatus().equals("Deposit")){

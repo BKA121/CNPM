@@ -1,10 +1,10 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Model.Expense;
 
-public class expense {
+public class Expense {
     private String Title,amount,description;
     private String day,month,year;
 
-    public expense(String title, String amount, String day, String month, String year, String description) {
+    public Expense(String title, String amount, String day, String month, String year, String description) {
         Title = title;
         this.amount = amount;
         this.description = description;
@@ -26,7 +26,7 @@ public class expense {
     }
 
     public  String getAmountWithRS(){
-        return "RS "+amount;
+        return amount + " VND";
     }
 
     public void setAmount(String amount) {

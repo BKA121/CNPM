@@ -1,6 +1,6 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Model.Goal;
 
-public class goal {
+public class Goal {
     private int ID;
 
     public int getID() {
@@ -21,7 +21,7 @@ public class goal {
         Status = status;
     }
 
-    public goal(String title, String amount, String type, String day, String month, String year) {
+    public Goal(String title, String amount, String type, String day, String month, String year) {
         Title = title;
         Amount = amount;
         Type = type;

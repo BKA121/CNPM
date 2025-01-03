@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.GettingStarted_two">
+    tools:context=".View.Login.Login_Balance_V">
 
     <ImageView
         android:id="@+id/imageView9"

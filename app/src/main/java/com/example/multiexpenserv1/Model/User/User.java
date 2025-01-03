@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Model.User;
 
 public class User {
     private final String lastName;

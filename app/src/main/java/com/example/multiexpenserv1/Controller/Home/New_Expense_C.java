@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Home;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.multiexpenserv1.Data.DataBaseHelper;
-import com.example.multiexpenserv1.Model.UserSettings;
-import com.example.multiexpenserv1.Model.Expense;
+import com.example.multiexpenserv1.Model.User.UserSettings;
+import com.example.multiexpenserv1.Model.Expense.Expense;
 import com.example.multiexpenserv1.View.Home.Home_V;
 import com.example.multiexpenserv1.View.Expenses.Show_Expenses_V;
 import com.example.multiexpenserv1.View.FlashScreen.Success_V;

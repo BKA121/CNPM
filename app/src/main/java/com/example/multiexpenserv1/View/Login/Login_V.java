@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Login;
 
 import android.os.Bundle;
 import android.widget.EditText;
@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.multiexpenserv1.Controller.Login_C;
+import com.example.multiexpenserv1.Controller.Start.Login_C;
 import com.example.multiexpenserv1.R;
 
 public class Login_V extends AppCompatActivity {

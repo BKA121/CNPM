@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Home;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.example.multiexpenserv1.View.Balance.Balance_in_V;
 import com.example.multiexpenserv1.View.Home.Information_V;
-import com.example.multiexpenserv1.Model.User;
+import com.example.multiexpenserv1.Model.User.User;
 
 import com.example.multiexpenserv1.View.Chart.Chart_V;
 import com.example.multiexpenserv1.View.Goal.New_Goal_V;

@@ -1,10 +1,10 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Home;
 
 import android.content.Intent;
 import android.view.View;
 
 import com.example.multiexpenserv1.Data.DataBaseHelper;
-import com.example.multiexpenserv1.Model.Goal;
+import com.example.multiexpenserv1.Model.Goal.Goal;
 import com.example.multiexpenserv1.View.FlashScreen.Success_V;
 import com.example.multiexpenserv1.View.Goal.New_Goal_V;
 import com.google.android.material.snackbar.Snackbar;

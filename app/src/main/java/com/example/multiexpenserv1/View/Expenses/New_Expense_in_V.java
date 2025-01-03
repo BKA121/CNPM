@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Expenses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.multiexpenserv1.Controller.New_Expense_C;
+import com.example.multiexpenserv1.Controller.Home.New_Expense_C;
 import com.example.multiexpenserv1.R;
 
 public class New_Expense_in_V extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Expenses;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.multiexpenserv1.Adapter.ShowExpenses_Adapter;
 import com.example.multiexpenserv1.Data.DataBaseHelper;
-import com.example.multiexpenserv1.Model.Expense;
+import com.example.multiexpenserv1.Model.Expense.Expense;
 import com.example.multiexpenserv1.R;
 
 import java.util.List;

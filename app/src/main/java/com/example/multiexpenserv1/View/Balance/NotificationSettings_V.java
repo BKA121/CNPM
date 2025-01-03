@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Balance;
 
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -14,8 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.example.multiexpenserv1.Controller.Notification_C;
-import com.example.multiexpenserv1.Model.NotificationSchedule;
+import com.example.multiexpenserv1.Controller.Setting.Notification_C;
+import com.example.multiexpenserv1.Model.Chart.NotificationSchedule;
 import com.example.multiexpenserv1.R;
 
 import java.util.ArrayList;

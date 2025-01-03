@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.multiexpenserv1.Model.UserSettings;
+import com.example.multiexpenserv1.Model.User.UserSettings;
 import com.example.multiexpenserv1.R;
+import com.example.multiexpenserv1.View.Home.Home_V;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Login_Balance_V extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Goal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.multiexpenserv1.Controller.My_Goals_C;
-import com.example.multiexpenserv1.Controller.New_Goal_C;
+import com.example.multiexpenserv1.Controller.Home.My_Goals_C;
+import com.example.multiexpenserv1.Controller.Home.New_Goal_C;
 import com.example.multiexpenserv1.R;
 
 public class New_Goal_V extends AppCompatActivity {

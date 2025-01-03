@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Setting;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;

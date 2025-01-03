@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.multiexpenserv1.Controller.Home_C;
-import com.example.multiexpenserv1.Model.User;
+import com.example.multiexpenserv1.Controller.Home.Home_C;
+import com.example.multiexpenserv1.Model.User.User;
 import com.example.multiexpenserv1.R;
 
 public class Home_V extends AppCompatActivity {

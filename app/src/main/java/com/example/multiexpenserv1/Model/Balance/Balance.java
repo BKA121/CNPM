@@ -1,6 +1,6 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Model.Balance;
 
-public class balance {
+public class Balance {
     private String title,amount;
     private String day;
     private final String month;
@@ -23,7 +23,7 @@ public class balance {
         this.status = status;
     }
 
-    public balance(String title, String amount, String day, String month, String year) {
+    public Balance(String title, String amount, String day, String month, String year) {
         this.amount = amount;
         this.day = day;
         this.month = month;

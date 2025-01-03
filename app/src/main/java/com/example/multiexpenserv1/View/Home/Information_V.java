@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Home;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,9 +8,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.multiexpenserv1.Controller.Balance_C;
+import com.example.multiexpenserv1.Controller.Home.Balance_C;
 import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.View.Balance.NotificationSettings_V;
+import com.example.multiexpenserv1.View.Login.Login_V;
 
 public class Information_V extends AppCompatActivity {
 

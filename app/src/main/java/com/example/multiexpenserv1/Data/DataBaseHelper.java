@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Data;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.example.multiexpenserv1.Model.Balance.Balance;
+import com.example.multiexpenserv1.Model.Expense.Expense;
+import com.example.multiexpenserv1.Model.Goal.Goal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +58,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
     // Write function for expenses
-    public boolean addExpenseToDB(expense obj) {
+    public boolean addExpenseToDB(Expense obj) {
         ContentValues cv = new ContentValues();
 
         // Putting content values with corresponding to the column names
@@ -71,13 +75,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             long insert = db.insert(EXPENSES_TABLE_NAME, null, cv);
             return insert != -1;
         } catch (Exception e) {
-            Log.e("DataBaseHelper", "Error adding expense", e);
+            Log.e("DataBaseHelper", "Error adding Expense", e);
             return false;
         }
     }
 
     // Write function for Balance
-    public boolean addBalanceDetailsToDB(balance obj){
+    public boolean addBalanceDetailsToDB(Balance obj){
         ContentValues cv=new ContentValues();
 
         // Putting content values with corresponding to the column names
@@ -93,12 +97,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             long insert = db.insert(BALANCE_TABLE_NAME, null, cv);
             return insert != -1;
         } catch (Exception e) {
-            Log.e("DataBaseHelper", "Error adding balance", e);
+            Log.e("DataBaseHelper", "Error adding Balance", e);
             return false;
         }
     }
     // Write function for new Goal
-    public boolean AddGoalToDB(goal obj){
+    public boolean AddGoalToDB(Goal obj){
         ContentValues cv=new ContentValues();
 
         // Putting content values with corresponding to the column names
@@ -115,15 +119,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             long insert = db.insert(GOAL_TABLE_NAME, null, cv);
             return insert != -1;
         } catch (Exception e) {
-            Log.e("DataBaseHelper", "Error adding goal", e);
+            Log.e("DataBaseHelper", "Error adding Goal", e);
             return false;
         }
     }
 
     // To get the data from the Expenses
-    public  List<expense> getAllExpenses() {
+    public  List<Expense> getAllExpenses() {
         //Declaring list to return
-        List<expense> returnList = new ArrayList<>();
+        List<Expense> returnList = new ArrayList<>();
         //Query to get data
         String query = "SELECT * FROM " + EXPENSES_TABLE_NAME;
 
@@ -141,7 +145,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                     String Year = cursor.getString(4);
                     String Description = cursor.getString(5);
                     //                 create object using constructor
-                    expense obj = new expense(Title, Amount, Day, Month, Year, Description);
+                    Expense obj = new Expense(Title, Amount, Day, Month, Year, Description);
                     returnList.add(obj);
                 } while (cursor.moveToNext());
             }
@@ -152,9 +156,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     // To get the data from the Balance
-    public  List<balance> getAllBalance() {
+    public  List<Balance> getAllBalance() {
         //Declaring list to return
-        List<balance> returnList = new ArrayList<>();
+        List<Balance> returnList = new ArrayList<>();
         //Query to get data
         String query = "SELECT * FROM " + BALANCE_TABLE_NAME;
         try (SQLiteDatabase db = this.getReadableDatabase();
@@ -174,7 +178,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                     String Status = cursor.getString(5);
 
 //                 create object using constructor
-                    balance obj = new balance(Title, Amount, Day, Month, Year);
+                    Balance obj = new Balance(Title, Amount, Day, Month, Year);
                     obj.setStatus(Status);
                     returnList.add(obj);
                 } while (cursor.moveToNext());
@@ -185,9 +189,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return returnList;
     }
     // To get the data from the Goals
-    public  List<goal> getAllGoals() {
+    public  List<Goal> getAllGoals() {
         //Declaring list to return
-        List<goal> returnList = new ArrayList<>();
+        List<Goal> returnList = new ArrayList<>();
         //Query to get data
         String query = "SELECT * FROM " + GOAL_TABLE_NAME;
 
@@ -207,7 +211,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                     String Status=cursor.getString(6);
                     int Id=cursor.getInt(7);
 //                 create object using constructor
-                    goal obj = new goal(Title,Type,Amount, Day, Month, Year);
+                    Goal obj = new Goal(Title,Type,Amount, Day, Month, Year);
                     obj.setStatus(Status);
                     obj.setID(Id);
                     returnList.add(obj);
@@ -226,7 +230,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         try (SQLiteDatabase db = this.getWritableDatabase()) {
             db.execSQL(query);
         } catch (Exception e) {
-            Log.e("DataBaseHelper", "Error changing goal status", e);
+            Log.e("DataBaseHelper", "Error changing Goal status", e);
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.multiexpenserv1.Data.DataBaseHelper;
-import com.example.multiexpenserv1.Model.Goal;
+import com.example.multiexpenserv1.Model.Goal.Goal;
 import com.example.multiexpenserv1.Adapter.MyGoals_Adapter;
 import com.example.multiexpenserv1.R;
 

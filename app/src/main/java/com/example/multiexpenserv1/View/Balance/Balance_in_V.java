@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Balance;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.multiexpenserv1.Controller.Balance_C;
+import com.example.multiexpenserv1.Controller.Home.Balance_C;
 import com.example.multiexpenserv1.R;
 
 public class Balance_in_V extends AppCompatActivity {

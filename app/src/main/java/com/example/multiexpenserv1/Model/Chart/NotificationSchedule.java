@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Model;
+package com.example.multiexpenserv1.Model.Chart;
 
 import java.util.Calendar;
 

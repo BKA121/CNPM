@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Chart;
 
 
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.example.multiexpenserv1.Controller.Chart_C;
+import com.example.multiexpenserv1.Controller.Home.Chart_C;
 import com.example.multiexpenserv1.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;

@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Goal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.multiexpenserv1.Controller.Show_Goals_In_Details_C;
+import com.example.multiexpenserv1.Controller.Home.Show_Goals_In_Details_C;
 import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.Adapter.MyGoals_Adapter;
 import java.util.Objects;

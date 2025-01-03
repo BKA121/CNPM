@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Start;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.multiexpenserv1.Model.Login;
+import com.example.multiexpenserv1.Model.User.Login;
 import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.View.Home.Home_V;
 import com.example.multiexpenserv1.View.Login.Login_Balance_V;

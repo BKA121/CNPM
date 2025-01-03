@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.Expenses;
 
 import androidx.appcompat.app.AppCompatActivity;
 

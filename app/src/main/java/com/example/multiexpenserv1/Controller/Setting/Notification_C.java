@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.Controller;
+package com.example.multiexpenserv1.Controller.Setting;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.example.multiexpenserv1.Model.NotificationSchedule;
+import com.example.multiexpenserv1.Model.Chart.NotificationSchedule;
 
 import java.util.Calendar;
 

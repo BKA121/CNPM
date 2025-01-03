@@ -10,36 +10,36 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.multiexpenserv1.Model.expense;
+import com.example.multiexpenserv1.Model.Expense.Expense;
 import com.example.multiexpenserv1.R;
-import com.example.multiexpenserv1.View.Show_Expenses_In_Details;
+import com.example.multiexpenserv1.View.Expenses.Show_Expenses_In_Details_V;
 
 import java.util.List;
 
-public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapter.ViewHolder>{
+public class ShowExpenses_Adapter extends RecyclerView.Adapter<ShowExpenses_Adapter.ViewHolder>{
     //Initialization
-    List<expense>expenseList;
+    List<Expense>expenseList;
     //Declaring keys for sharing in intent
-    public static String ShowExpenseTitleKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Title";
-    public static String ShowExpenseAmountKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Amount";
-    public static String ShowExpenseDateKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Date";
-    public static String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.Adapter.ShowExpensesAdapter.Description";
+    public static String ShowExpenseTitleKey=" com.example.multiexpenserv1.Adapter.ShowExpenses_Adapter.Title";
+    public static String ShowExpenseAmountKey=" com.example.multiexpenserv1.Adapter.ShowExpenses_Adapter.Amount";
+    public static String ShowExpenseDateKey=" com.example.multiexpenserv1.Adapter.ShowExpenses_Adapter.Date";
+    public static String ShowExpenseDescriptionKey=" com.example.multiexpenserv1.Adapter.ShowExpenses_Adapter.Description";
     Context context;
 
     //constructor for context
-    public ShowExpensesAdapter(List<expense> expenseList, Context context) {
+    public ShowExpenses_Adapter(List<Expense> expenseList, Context context) {
         this.expenseList = expenseList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public ShowExpensesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ShowExpenses_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.activity_show_expenses_layout,parent,false);
         return new ViewHolder(view);
     }
     @Override
-    public void onBindViewHolder(@NonNull ShowExpensesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ShowExpenses_Adapter.ViewHolder holder, int position) {
         holder.Title.setText(expenseList.get(position).getTitle());
         holder.Amount.setText(expenseList.get(position).getAmountWithRS());
         holder.Date.setText(expenseList.get(position).getDate());
@@ -66,10 +66,10 @@ public class ShowExpensesAdapter extends RecyclerView.Adapter<ShowExpensesAdapte
             int position=this.getAdapterPosition();
 
             //Getting object at the clicked position
-            expense e=expenseList.get(position);
+            Expense e=expenseList.get(position);
 
             //Declaring intent
-            Intent intent=new Intent(context, Show_Expenses_In_Details.class);
+            Intent intent=new Intent(context, Show_Expenses_In_Details_V.class);
 
             //Initializing values from object
             String Title,Amount,Date,Description;

@@ -1,4 +1,4 @@
-package com.example.multiexpenserv1.View;
+package com.example.multiexpenserv1.View.FlashScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.multiexpenserv1.Controller.My_Goals_C;
+import com.example.multiexpenserv1.Controller.Home.My_Goals_C;
 import com.example.multiexpenserv1.R;
 
 public class Congratulations_V extends AppCompatActivity {
