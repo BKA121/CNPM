@@ -57,12 +57,10 @@ public class NotificationSettingsActivity extends AppCompatActivity {
 
             // Kiểm tra và yêu cầu quyền POST_NOTIFICATIONS nếu cần
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                if (ActivityCompat.checkSelfPermission(
-                        NotificationSettingsActivity.this,
-                        android.Manifest.permission.POST_NOTIFICATIONS
-                ) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(
-                            NotificationSettingsActivity.this,
+                if (ActivityCompat.checkSelfPermission(this,
+                        android.Manifest.permission.POST_NOTIFICATIONS)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(this,
                             new String[]{android.Manifest.permission.POST_NOTIFICATIONS},
                             1001
                     );
@@ -84,7 +82,6 @@ public class NotificationSettingsActivity extends AppCompatActivity {
     }
 
     private void setNotification(Calendar calendar) {
-
         // Tạo Intent và PendingIntent
         Intent intent = new Intent(this, NotificationReceiver.class);
         intent.putExtra("title", "Ngày hôm nay của bạn ổn chứ!?");
@@ -111,12 +108,11 @@ public class NotificationSettingsActivity extends AppCompatActivity {
 
         // Sử dụng setRepeating để đặt lịch lặp lại hằng ngày
         alarmManager.setInexactRepeating(
-                AlarmManager.RTC_WAKEUP,             // Loại báo thức
-                calendar.getTimeInMillis(),          // Thời gian thông báo đầu tiên
-                interval,                            // Khoảng thời gian lặp lại
-                pendingIntent                        // PendingIntent chứa thông báo
+                AlarmManager.RTC_WAKEUP,       // Loại báo thức
+                calendar.getTimeInMillis(),    // Thời gian thông báo đầu tiên
+                interval,                      // Khoảng thời gian lặp lại
+                pendingIntent                  // PendingIntent chứa thông báo
         );
-
         Toast.makeText(this, "Thông báo hằng ngày đã được đặt!", Toast.LENGTH_SHORT).show();
     }
 
