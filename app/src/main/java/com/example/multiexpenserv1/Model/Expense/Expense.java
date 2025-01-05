@@ -1,8 +1,11 @@
 package com.example.multiexpenserv1.Model.Expense;
 
+import com.example.multiexpenserv1.Model.User.User;
+
 public class Expense {
     private String Title,amount,description;
     private String day,month,year;
+    User user;
 
     public Expense(String title, String amount, String day, String month, String year, String description) {
         Title = title;
@@ -26,7 +29,7 @@ public class Expense {
     }
 
     public  String getAmountWithRS(){
-        return amount + " VND";
+        return user.formatCurrency(amount) + " VND";
     }
 
     public void setAmount(String amount) {
