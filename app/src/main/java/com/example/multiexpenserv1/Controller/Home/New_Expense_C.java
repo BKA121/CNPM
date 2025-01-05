@@ -66,7 +66,11 @@ public class New_Expense_C {
             // Xử lý logic trừ số dư
             try {
                 int amountValue = Integer.parseInt(amount);
-
+                if (amountValue <= 0) {
+                    Snackbar snackbar = Snackbar.make(v, "Số tiền phải lớn hơn 0, vui lòng nhập lại !!!", Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                    return;
+                }
                 if (currentBalance >= amountValue) {
 
                     currentBalance -= amountValue; // Cập nhật số dư mới
