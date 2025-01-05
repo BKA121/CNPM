@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.multiexpenserv1.Controller.Home.Balance_C;
+import com.example.multiexpenserv1.Model.User.User;
 import com.example.multiexpenserv1.R;
 import com.example.multiexpenserv1.View.Balance.NotificationSettings_V;
 import com.example.multiexpenserv1.View.Login.Login_V;
@@ -22,7 +23,7 @@ public class Information_V extends AppCompatActivity {
     private TextView Notification_Settings;
     private TextView logout;
     private Balance_C balanceController;
-
+    User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class Information_V extends AppCompatActivity {
         Notification_Settings = findViewById(R.id.tv_notifications_label);
         logout = findViewById(R.id.logout);
         balanceController = new Balance_C(this);
-        currentBalance.setText(balanceController.getCurrentBalance() + " VND");
+        currentBalance.setText(user.formatCurrency(balanceController.getCurrentBalance()) + " VND");
 
         fname = balanceController.getFirstName();
         lname = balanceController.getLastName();
