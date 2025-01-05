@@ -1,11 +1,14 @@
 package com.example.multiexpenserv1.Model.Balance;
 
+import com.example.multiexpenserv1.Model.User.User;
+
 public class Balance {
     private String title,amount;
     private String day;
     private final String month;
     private final String year;
     private String status;
+    User user;
 
     public String getTitle() {
         return title;
@@ -34,7 +37,7 @@ public class Balance {
         return amount;
     }
     public  String getAmountWithRS(){
-        return "RS "+amount;
+        return user.formatCurrency(amount) + " VND";
     }
     public void setAmount(String amount) {
         this.amount = amount;
