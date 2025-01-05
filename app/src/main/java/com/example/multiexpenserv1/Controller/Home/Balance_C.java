@@ -93,6 +93,11 @@ public class Balance_C {
                     snackbar.show();
                 } else {
                     int amount_t = Integer.parseInt(Amount_String);
+                    if (amount_t <= 0) {
+                        Snackbar snackbar = Snackbar.make(v, "Số tiền phải lớn hơn 0, vui lòng nhập lại !!!", Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                        return;
+                    }
                     if (isAddOperationDone) {
                         valueBalance += amount_t;
                         updateBalance(valueBalance);
