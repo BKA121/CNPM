@@ -1,5 +1,7 @@
 package com.example.multiexpenserv1.Model.Goal;
 
+import com.example.multiexpenserv1.Model.User.User;
+
 public class Goal {
     private int ID;
 
@@ -12,7 +14,8 @@ public class Goal {
     }
 
     private String Title,Amount,Type,Day,Month,Year,Status;
-
+    User user;
+    
     public String getStatus() {
         return Status;
     }
@@ -30,7 +33,7 @@ public class Goal {
         Year = year;
     }
     public  String getAmountWithRS(){
-        return Amount + " VND";
+       return user.formatCurrency(Amount) + " VND";
     }
 
     public String getTitle() {
