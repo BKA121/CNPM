@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.multiexpenserv1.Controller.Home.Balance_C;
+import com.example.multiexpenserv1.Model.User.User;
 import com.example.multiexpenserv1.R;
 
 public class Balance_in_V extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class Balance_in_V extends AppCompatActivity {
         Transactions = findViewById(R.id.transactions);
 
         controller = new Balance_C(this);
-        Current_Balance_Balance_in.setText(controller.getCurrentBalance()+ " VND");
+        Current_Balance_Balance_in.setText(user.formatCurrency(controller.getCurrentBalance())+ " VND");
 
         Save.setOnClickListener(v -> controller.activity_Save(Title,Amount,Day,Month,Year, Save));
 
