@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.multiexpenserv1.Controller.Home.Chart_C;
+import com.example.multiexpenserv1.Model.User.User;
 import com.example.multiexpenserv1.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -76,9 +77,9 @@ public class Chart_V extends AppCompatActivity {
             lineChart.invalidate();
             return;
         }
-        minExpenseText.setText("Ngày chi tiêu ít nhất: " + minExpenseDay + " (" + minExpense + " VND)");
-        maxExpenseText.setText("Ngày chi tiêu nhiều nhất: " + maxExpenseDay + " (" + maxExpense + " VND)");
-        totalExpenseText.setText("Tổng chi tiêu: " + totalExpenses + " VND");
+        minExpenseText.setText("Ngày chi tiêu ít nhất: " + minExpenseDay + " (" + user.formatCurrency(String.valueOf((int)minExpense)) + " VND)");
+        maxExpenseText.setText("Ngày chi tiêu nhiều nhất: " + maxExpenseDay + " (" + user.formatCurrency(String.valueOf((int)maxExpense)) + " VND)");
+        totalExpenseText.setText("Tổng chi tiêu: " + user.formatCurrency(String.valueOf((int)totalExpenses)) + " VND");
 
         // Thiết lập màu sắc cho đường
         lineDataSet = new LineDataSet(entries, "Dữ liệu cho 30 ngày");
