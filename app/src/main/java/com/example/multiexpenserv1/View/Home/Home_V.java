@@ -37,7 +37,7 @@ public class Home_V extends AppCompatActivity {
         // Lấy thông tin người dùng và hiển thị
         user = homeController.getUserData();
         name.setText("Xin chào " + user.getLastName());
-        balance.setText(user.getCurrentBalance() + " VND");
+        balance.setText(user.formatCurrency(user.getCurrentBalance()) + " VND");
 
         // Xử lý sự kiện nhấn nút
         homeController.handleButtonClicks(share, newexpense, Balance_in, Goals, Chart, information);
