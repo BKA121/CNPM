@@ -38,6 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView51"
-        app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/successfully_done__" />
+        app:layout_constraintVertical_bias="0.222" />
 </androidx.constraintlayout.widget.ConstraintLayout>

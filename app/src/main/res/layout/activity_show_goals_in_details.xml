@@ -209,7 +209,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/Back_Show_Goals_In_Details"
         app:layout_constraintEnd_toEndOf="@+id/Back_Show_Goals_In_Details"
         app:layout_constraintStart_toStartOf="@+id/Back_Show_Goals_In_Details"
-        app:layout_constraintTop_toTopOf="@+id/Back_Show_Goals_In_Details"
-        app:srcCompat="@drawable/back_txt" />
+        app:layout_constraintTop_toTopOf="@+id/Back_Show_Goals_In_Details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

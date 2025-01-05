@@ -6,7 +6,7 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.7.2'  // Hoặc phiên bản mới nhất nếu có
+        classpath 'com.android.tools.build:gradle:8.7.3'  // Hoặc phiên bản mới nhất nếu có
 
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -22,6 +22,6 @@ allprojects {
     }
 }
 
-tasks.register('clean') {
-    delete project.buildDir
+tasks.register("clean", Delete) {
+    delete rootProject.layout.buildDirectory
 }

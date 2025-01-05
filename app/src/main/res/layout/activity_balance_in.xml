@@ -84,8 +84,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView33"
         app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toEndOf="@+id/imageView34"
-        app:layout_constraintTop_toTopOf="@+id/imageView33"
-        app:srcCompat="@drawable/current_balance" />
+        app:layout_constraintTop_toTopOf="@+id/imageView33" />
 
     <TextView
         android:id="@+id/Balance_in_balance"
@@ -124,8 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/imageView54"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/balance" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/transactions"
@@ -205,8 +203,7 @@
         app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/balance_add"
         app:layout_constraintTop_toTopOf="@+id/balance_add"
-        app:layout_constraintVertical_bias="0.511"
-        app:srcCompat="@drawable/add_1" />
+        app:layout_constraintVertical_bias="0.511" />
 
     <TextView
         android:id="@+id/textViewBot"
@@ -219,8 +216,7 @@
         app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="@+id/imageView63"
         app:layout_constraintTop_toTopOf="@+id/balance_minus"
-        app:layout_constraintVertical_bias="0.479"
-        app:srcCompat="@drawable/minus_1" />
+        app:layout_constraintVertical_bias="0.479" />
 
     <ImageView
         android:id="@+id/back_btn_balance"
@@ -252,8 +248,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/back_btn_balance"
         app:layout_constraintEnd_toEndOf="@+id/back_btn_balance"
         app:layout_constraintStart_toStartOf="@+id/back_btn_balance"
-        app:layout_constraintTop_toTopOf="@+id/back_btn_balance"
-        app:srcCompat="@drawable/back_txt" />
+        app:layout_constraintTop_toTopOf="@+id/back_btn_balance" />
 
     <TextView
         android:id="@+id/textViewSave"
@@ -263,8 +258,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/save_button_balance"
         app:layout_constraintEnd_toEndOf="@+id/save_button_balance"
         app:layout_constraintStart_toStartOf="@+id/save_button_balance"
-        app:layout_constraintTop_toTopOf="@+id/save_button_balance"
-        app:srcCompat="@drawable/save" />
+        app:layout_constraintTop_toTopOf="@+id/save_button_balance" />
 
     <EditText
         android:id="@+id/title_balance"

@@ -4,8 +4,8 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.multiexpenserv1.Controller.Setting.Notification_C;
-import com.example.multiexpenserv1.Model.Chart.NotificationSchedule;
+import com.example.multiexpenserv1.Model.Schedule.NotificationSchedule;
 import com.example.multiexpenserv1.R;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.Calendar;
 public class NotificationSettings_V extends AppCompatActivity {
 
     private TimePicker timePicker;
-    private Button btnSetNotification;
+    private ImageView btnSetNotification;
     private Spinner spFrequency;
     EditText etReminderContent;
     ArrayList<String> itemsFreq = new ArrayList<>();

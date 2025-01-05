@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.example.multiexpenserv1.Model.Chart.NotificationSchedule;
+import com.example.multiexpenserv1.Model.Schedule.NotificationSchedule;
 
 import java.util.Calendar;
 

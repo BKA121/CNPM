@@ -1,6 +1,5 @@
 package com.example.multiexpenserv1.Adapter;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import com.example.multiexpenserv1.Model.Goal.Goal;
 import com.example.multiexpenserv1.R;
@@ -66,21 +64,16 @@ public class MyGoals_Adapter extends RecyclerView.Adapter<MyGoals_Adapter.ViewHo
             Title=itemView.findViewById(R.id.Title_My_Goals);
             Amount=itemView.findViewById(R.id.Amount_My_Goals);
             Date=itemView.findViewById(R.id.Date_My_Goals);
-
-
         }
 
         @Override
         public void onClick(View v) {
             //Getting click position
             int position=this.getAdapterPosition();
-
             //Getting object at the clicked position
             Goal obj=goalsList.get(position);
-
             //Declaring intent
             Intent intent=new Intent(context, Show_Goals_In_Details_V.class);
-
             //Initializing values from object
             String Title,Amount,Date,Status,Category;
             int ID;

@@ -90,8 +90,7 @@
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toEndOf="@+id/imageView61"
         app:layout_constraintTop_toTopOf="@+id/imageView60"
-        app:layout_constraintVertical_bias="0.514"
-        app:srcCompat="@drawable/new_goal" />
+        app:layout_constraintVertical_bias="0.514" />
 
     <ImageView
         android:id="@+id/New_Goal_My_Goals_Bg"
@@ -164,8 +163,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/Save_Btn_New_Goal"
         app:layout_constraintEnd_toEndOf="@+id/Save_Btn_New_Goal"
         app:layout_constraintStart_toStartOf="@+id/Save_Btn_New_Goal"
-        app:layout_constraintTop_toTopOf="@+id/Save_Btn_New_Goal"
-        app:srcCompat="@drawable/save" />
+        app:layout_constraintTop_toTopOf="@+id/Save_Btn_New_Goal" />
 
     <TextView
         android:id="@+id/MyGOals_text"
@@ -300,7 +298,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/Back_Btn_New_Goal"
         app:layout_constraintEnd_toEndOf="@+id/Back_Btn_New_Goal"
         app:layout_constraintStart_toStartOf="@+id/Back_Btn_New_Goal"
-        app:layout_constraintTop_toTopOf="@+id/Back_Btn_New_Goal"
-        app:srcCompat="@drawable/back_txt" />
+        app:layout_constraintTop_toTopOf="@+id/Back_Btn_New_Goal"   />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -168,7 +168,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/back_Show_expenses_in_detail"
         app:layout_constraintEnd_toEndOf="@+id/back_Show_expenses_in_detail"
         app:layout_constraintStart_toStartOf="@+id/back_Show_expenses_in_detail"
-        app:layout_constraintTop_toTopOf="@+id/back_Show_expenses_in_detail"
-        app:srcCompat="@drawable/back_txt" />
+        app:layout_constraintTop_toTopOf="@+id/back_Show_expenses_in_detail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
